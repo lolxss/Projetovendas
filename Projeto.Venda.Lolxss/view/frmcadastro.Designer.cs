@@ -140,6 +140,7 @@
             excluir.TabIndex = 11;
             excluir.Text = "excluir";
             excluir.UseVisualStyleBackColor = true;
+            excluir.Click += excluir_Click;
             // 
             // frmcadastro
             // 

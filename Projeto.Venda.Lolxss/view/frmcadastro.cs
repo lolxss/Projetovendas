@@ -38,11 +38,18 @@ namespace Projeto.Venda.Lolxss.view
             };
             productcontroller controller = new productcontroller();
             bool resp = controller.createproduct(product);
+            if(quantidade < 0 || preco < 0)
+            {
+
+            }
+
+
             if (resp)
             {
                 MessageBox.Show("cadastrar com sucesso", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 carregarprodutos();
                 limparcampos();
+
 
             }
             else
@@ -95,7 +102,7 @@ namespace Projeto.Venda.Lolxss.view
                 this.atualizar.Enabled = false;
                 this.excluir.Enabled = false;
             }
-        
+
         }
 
         private void dgvprodutos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -118,7 +125,28 @@ namespace Projeto.Venda.Lolxss.view
             this.quantidade.Value = product.quantidade;
             productselected = product;
             this.atualizar.Enabled = true;
+            this.excluir.Enabled = true;
             return;
+        }
+
+        private void excluir_Click(object sender, EventArgs e)
+        {
+            bool resp = controller.delete(productselected);
+            if (resp)
+            {
+                MessageBox.Show("produto deletado", "remoçao de produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limparcampos();
+                carregarprodutos();
+                this.atualizar.Enabled = false;
+                this.excluir.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("erro ao excluir o produto", "remoçao de produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.atualizar.Enabled = false;
+                this.excluir.Enabled = false;
+                productselected = null;
+            }
         }
     }
 }
