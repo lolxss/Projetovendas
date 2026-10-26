@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmcadastro.cs",
+              "DocumentMoniker": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "RelativeDocumentMoniker": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "RelativeToolTip": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwCgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T22:30:23.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmcadastro.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "RelativeDocumentMoniker": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs [Projeto]",
+              "RelativeToolTip": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T22:30:15.904Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "productcontroller.cs",
+              "DocumentMoniker": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
+              "RelativeDocumentMoniker": "Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
+              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
+              "RelativeToolTip": "Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowB8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T22:25:11.416Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
