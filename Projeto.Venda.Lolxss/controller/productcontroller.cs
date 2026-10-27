@@ -1,4 +1,6 @@
-﻿using Projeto.Venda.Lolxss.model;
+﻿using MySqlConnector;
+using Projeto.Venda.Lolxss.database;
+using Projeto.Venda.Lolxss.model;
 using Projeto.Venda.Lolxss.repository;
 using System;
 using System.Collections.Generic;
@@ -25,6 +27,18 @@ namespace Projeto.Venda.Lolxss.controller
         {
             return repository.getAll();
         }
+
+        public List<product> listbypage(int quantity, int page)
+        {
+            return repository.listperpage(quantity, page);
+        }
+        
+        public int quantitybypage(int itemsquantity)
+        {
+            int productquantity = repository.productquantity();
+            return (int)Math.Ceiling((decimal)productquantity / itemsquantity);
+        }
+        
         public bool update(product product)
         {
     

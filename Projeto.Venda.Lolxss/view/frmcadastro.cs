@@ -16,6 +16,10 @@ namespace Projeto.Venda.Lolxss.view
         private productcontroller controller;
 
         private product? productselected;
+
+        private int totaldepaginas = 5;
+        private int paginaatual = 1;
+        private int totalporpagina = 5;
         public frmcadastro()
         {
             InitializeComponent();
@@ -38,13 +42,13 @@ namespace Projeto.Venda.Lolxss.view
             };
             productcontroller controller = new productcontroller();
             bool resp = controller.createproduct(product);
-            if(quantidade < 0 || preco < 0)
+            if (quantidade < 0 || preco < 1)
             {
-
+                MessageBox.Show("produto nao pode ter preco menor do que 1 ou quantidade menor do que 0", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
-            if (resp)
+            else if (resp)
             {
                 MessageBox.Show("cadastrar com sucesso", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 carregarprodutos();
@@ -63,12 +67,20 @@ namespace Projeto.Venda.Lolxss.view
             //finalizar produtos
 
             carregarprodutos();
+            //int pages = controller.quantitybypage(5);
+            //lbl.Text = $" 1 de {pages}";
         }
         private void carregarprodutos()
         {
             List<product> list = controller.getAll();
             dgvprodutos.DataSource = list;
             this.dgvprodutos.Columns["id_funcionario"].Visible = false;
+
+            totaldepaginas = controller.quantitybypage(totalporpagina);
+            if(paginaatual > totaldepaginas)
+            {
+                paginaatual = totaldepaginas;
+            }
 
         }
 
@@ -93,7 +105,12 @@ namespace Projeto.Venda.Lolxss.view
             productselected.marca = this.txtmarca.Text;
             productselected.quantidade = (int)this.quantidade.Value;
             bool resp = controller.update(productselected);
-            if (resp)
+
+            if (productselected.preco < 1 || productselected.quantidade < 0)
+            {
+                MessageBox.Show("produto nao pode ter preco menor do que 1 ou quantidade menor do que 0", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (resp)
             {
                 MessageBox.Show("curso atualizado com sucesso", "1155 do ET",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -146,6 +163,30 @@ namespace Projeto.Venda.Lolxss.view
                 this.atualizar.Enabled = false;
                 this.excluir.Enabled = false;
                 productselected = null;
+            }
+        }
+        //manipular as paginas
+        private void proximo_Click(object sender, EventArgs e)
+        {
+            if(paginaatual < totaldepaginas)
+            {
+             paginaatual++;
+                atualizarlbl();
+                carregarprodutos();
+            }
+        }
+        private void atualizarlbl()
+        {
+            this.lbl.Text = $"{paginaatual} de {totaldepaginas}";
+        }
+
+        private void anterior_Click(object sender, EventArgs e)
+        {
+            if (paginaatual > totaldepaginas)
+            {
+                paginaatual--;
+                atualizarlbl();
+                carregarprodutos();
             }
         }
     }

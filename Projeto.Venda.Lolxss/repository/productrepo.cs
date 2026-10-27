@@ -55,6 +55,31 @@ namespace Projeto.Venda.Lolxss.repository
             //ExecuteReader() serve para comandos select
         }
 
+        public List<product> listperpage(int quantity, int page)
+        {
+            int offset = quantity * (page - 1);
+            using MySqlConnection conector = DataBase.GetConnection();
+            string sql = "SELECT * FROM produtos LIMIT @limit OFFSET @offset";
+            using MySqlCommand cmd = new MySqlCommand(sql, conector);
+            cmd.Parameters.AddWithValue("@limit", quantity);
+            cmd.Parameters.AddWithValue("@offset", offset);
+            using var reader = cmd.ExecuteReader();
+
+            List<product> list = new List<product>();
+            while (reader.Read())
+            {
+                list.Add(map(reader));
+            }
+            return list;
+        }
+        public int productquantity()
+        {
+            using MySqlConnection connection = DataBase.GetConnection();
+            string sql = "SELECT COUNT(*) FROM produtos";
+            using MySqlCommand cmd = new MySqlCommand(sql, connection);
+            return Convert.ToInt32(cmd.ExecuteScalar());
+        }
+
         public bool update(product product)
         {
             using MySqlConnection connection = DataBase.GetConnection();

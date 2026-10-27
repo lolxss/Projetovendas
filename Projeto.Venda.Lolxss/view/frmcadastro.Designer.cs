@@ -39,6 +39,9 @@
             dgvprodutos = new DataGridView();
             atualizar = new Button();
             excluir = new Button();
+            anterior = new Button();
+            proximo = new Button();
+            lbl = new Label();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvprodutos).BeginInit();
             SuspendLayout();
@@ -109,7 +112,7 @@
             dgvprodutos.AllowUserToDeleteRows = false;
             dgvprodutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvprodutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvprodutos.Location = new Point(22, 129);
+            dgvprodutos.Location = new Point(21, 101);
             dgvprodutos.MultiSelect = false;
             dgvprodutos.Name = "dgvprodutos";
             dgvprodutos.ReadOnly = true;
@@ -142,11 +145,44 @@
             excluir.UseVisualStyleBackColor = true;
             excluir.Click += excluir_Click;
             // 
+            // anterior
+            // 
+            anterior.Location = new Point(72, 547);
+            anterior.Name = "anterior";
+            anterior.Size = new Size(75, 23);
+            anterior.TabIndex = 12;
+            anterior.Text = "<";
+            anterior.UseVisualStyleBackColor = true;
+            anterior.Click += anterior_Click;
+            // 
+            // proximo
+            // 
+            proximo.Location = new Point(732, 547);
+            proximo.Name = "proximo";
+            proximo.Size = new Size(75, 23);
+            proximo.TabIndex = 13;
+            proximo.Text = ">";
+            proximo.UseVisualStyleBackColor = true;
+            proximo.Click += proximo_Click;
+            // 
+            // lbl
+            // 
+            lbl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lbl.Location = new Point(314, 557);
+            lbl.Name = "lbl";
+            lbl.Size = new Size(187, 23);
+            lbl.TabIndex = 14;
+            lbl.Text = "pagina 1 de 5";
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmcadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 581);
+            Controls.Add(lbl);
+            Controls.Add(proximo);
+            Controls.Add(anterior);
             Controls.Add(excluir);
             Controls.Add(atualizar);
             Controls.Add(dgvprodutos);
@@ -179,5 +215,8 @@
         private DataGridView dgvprodutos;
         private Button atualizar;
         private Button excluir;
+        private Button anterior;
+        private Button proximo;
+        private Label lbl;
     }
 }
