@@ -41,10 +41,9 @@ namespace Projeto.Venda.Lolxss.controller
         
         public bool update(product product)
         {
-    
-            
-                return repository.update(product);  
+            return repository.update(product);  
         }
+
         public bool delete(product product)
         {
             return repository.delete(product.cod_prod);

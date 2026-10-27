@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\repository\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\repository\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|c:\\users\\denis.mssvezu\\source\\repos\\projeto.venda.lolxss\\projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8246DB6B-B911-C9DC-56C5-1E88731BBE94}|Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj|solutionrelative:projeto.venda.lolxss\\view\\frmcadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,51 +34,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmcadastro.cs",
               "DocumentMoniker": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
               "RelativeDocumentMoniker": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
-              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs*",
-              "RelativeToolTip": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs*",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwFsAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "RelativeToolTip": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAuwEsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T23:54:00.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmcadastro.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
               "RelativeDocumentMoniker": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs",
-              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs [Projeto]*",
-              "RelativeToolTip": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs [Projeto]*",
+              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\view\\frmcadastro.cs [Projeto]",
+              "RelativeToolTip": "Projeto.Venda.Lolxss\\view\\frmcadastro.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T23:53:55.154Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "productcontroller.cs",
               "DocumentMoniker": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
               "RelativeDocumentMoniker": "Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
               "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
               "RelativeToolTip": "Projeto.Venda.Lolxss\\controller\\productcontroller.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAqwCMAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwB4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T23:52:44.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "productrepo.cs",
               "DocumentMoniker": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\repository\\productrepo.cs",
               "RelativeDocumentMoniker": "Projeto.Venda.Lolxss\\repository\\productrepo.cs",
-              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\repository\\productrepo.cs*",
-              "RelativeToolTip": "Projeto.Venda.Lolxss\\repository\\productrepo.cs*",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAwEAAAAA5AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\repository\\productrepo.cs",
+              "RelativeToolTip": "Projeto.Venda.Lolxss\\repository\\productrepo.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwGsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T23:37:59.587Z",
               "EditorCaption": ""

@@ -70,9 +70,10 @@ namespace Projeto.Venda.Lolxss.view
             //int pages = controller.quantitybypage(5);
             //lbl.Text = $" 1 de {pages}";
         }
+        
         private void carregarprodutos()
         {
-            List<product> list = controller.getAll();
+            List<product> list = controller.listbypage(totalporpagina, paginaatual);
             dgvprodutos.DataSource = list;
             this.dgvprodutos.Columns["id_funcionario"].Visible = false;
 
@@ -81,14 +82,15 @@ namespace Projeto.Venda.Lolxss.view
             {
                 paginaatual = totaldepaginas;
             }
+            atualizarlbl();
 
         }
-
 
         private void dgvprodutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+        
         private void limparcampos()
         {
             this.txtnome.Clear();
@@ -165,6 +167,7 @@ namespace Projeto.Venda.Lolxss.view
                 productselected = null;
             }
         }
+        
         //manipular as paginas
         private void proximo_Click(object sender, EventArgs e)
         {
@@ -175,6 +178,7 @@ namespace Projeto.Venda.Lolxss.view
                 carregarprodutos();
             }
         }
+        
         private void atualizarlbl()
         {
             this.lbl.Text = $"{paginaatual} de {totaldepaginas}";
@@ -182,12 +186,13 @@ namespace Projeto.Venda.Lolxss.view
 
         private void anterior_Click(object sender, EventArgs e)
         {
-            if (paginaatual > totaldepaginas)
+            if (paginaatual > 1)
             {
                 paginaatual--;
                 atualizarlbl();
                 carregarprodutos();
             }
         }
+    
     }
 }

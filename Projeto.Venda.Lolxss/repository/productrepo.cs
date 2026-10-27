@@ -102,9 +102,7 @@ namespace Projeto.Venda.Lolxss.repository
         public bool delete(int cod_prod)
         {
             using MySqlConnection connection = DataBase.GetConnection();
-            string sql = @"UPDATE produtos SET
-                    nome =@nome, marca=@marca, preco=@preco, quantidade=@quantidade
-                      WHERE cod_prod =@cod_prod";
+            string sql = @"DELETE FROM produtos WHERE cod_prod = @cod_prod";
             using MySqlCommand cmd = new MySqlCommand(sql, connection);
             cmd.Parameters.AddWithValue("@cod_prod", cod_prod);
             return cmd.ExecuteNonQuery() > 0;
