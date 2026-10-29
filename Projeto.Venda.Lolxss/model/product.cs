@@ -15,6 +15,17 @@ namespace Projeto.Venda.Lolxss.model
         public int id_funcionario { get; set; }
         public DateTime dat_registro { get; set; }
 
+        public void validar()
+        {
+            if(preco <= 0)
+            {
+                throw new ArgumentException("o preço nao pode ser zero");
+            }
+            if(quantidade < 0)
+            {
+                throw new ArgumentException("a quantidade nao pode ser menor que zero");
+            }
+        }
 
     }
 }

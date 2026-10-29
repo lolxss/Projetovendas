@@ -15,7 +15,10 @@ namespace Projeto.Venda.Lolxss.controller
             int id_funcionario = session.userAuth.id_funcionario;
             product.id_funcionario = id_funcionario;
             repository.Createproduct(product);
+            product.validar();
+            //fazer cadastro
             return true;
+
         }
         private productrepo repository;
         public productcontroller()

@@ -42,6 +42,7 @@
             anterior = new Button();
             proximo = new Button();
             lbl = new Label();
+            cbxquantidade = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvprodutos).BeginInit();
             SuspendLayout();
@@ -175,11 +176,22 @@
             lbl.Text = "pagina 1 de 5";
             lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // cbxquantidade
+            // 
+            cbxquantidade.FormattingEnabled = true;
+            cbxquantidade.Items.AddRange(new object[] { "10", "20", "50", "100" });
+            cbxquantidade.Location = new Point(599, 34);
+            cbxquantidade.Name = "cbxquantidade";
+            cbxquantidade.Size = new Size(94, 23);
+            cbxquantidade.TabIndex = 15;
+            cbxquantidade.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // frmcadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 581);
+            Controls.Add(cbxquantidade);
             Controls.Add(lbl);
             Controls.Add(proximo);
             Controls.Add(anterior);
@@ -196,7 +208,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmcadastro";
             Text = "frmvenda";
-            Load += frmcadastro_Load;
+            Load += o;
             ((System.ComponentModel.ISupportInitialize)quantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvprodutos).EndInit();
             ResumeLayout(false);
@@ -218,5 +230,6 @@
         private Button anterior;
         private Button proximo;
         private Label lbl;
+        private ComboBox cbxquantidade;
     }
 }

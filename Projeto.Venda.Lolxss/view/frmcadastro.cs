@@ -40,49 +40,54 @@ namespace Projeto.Venda.Lolxss.view
                 preco = preco,
                 quantidade = quantidade
             };
-            productcontroller controller = new productcontroller();
+            try
+            {
             bool resp = controller.createproduct(product);
-            if (quantidade < 0 || preco < 1)
-            {
-                MessageBox.Show("produto nao pode ter preco menor do que 1 ou quantidade menor do que 0", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                if (resp)
+                {
+                    MessageBox.Show("cadastrar com sucesso", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    carregarprodutos();
+                    limparcampos();
 
 
-            else if (resp)
-            {
-                MessageBox.Show("cadastrar com sucesso", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("erro ao cadastrar", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 carregarprodutos();
-                limparcampos();
-
-
             }
-            else
+            catch(Exception ex) 
             {
-                MessageBox.Show("erro ao cadastrar", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //mostrar o porque do erro
+                MessageBox.Show(ex.Message, "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
         }
 
         private void frmcadastro_Load(object sender, EventArgs e)
         {
             //finalizar produtos
-
+            this.cbxquantidade.SelectedIndex = 0;
             carregarprodutos();
-            //int pages = controller.quantitybypage(5);
+            //int pages = controller.quantitybypage(5);S
             //lbl.Text = $" 1 de {pages}";
         }
-        
+
         private void carregarprodutos()
         {
-            List<product> list = controller.listbypage(totalporpagina, paginaatual);
-            dgvprodutos.DataSource = list;
-            this.dgvprodutos.Columns["id_funcionario"].Visible = false;
-
             totaldepaginas = controller.quantitybypage(totalporpagina);
-            if(paginaatual > totaldepaginas)
+            if (paginaatual > totaldepaginas)
             {
                 paginaatual = totaldepaginas;
             }
             atualizarlbl();
+
+
+            List<product> list = controller.listbypage(totalporpagina, paginaatual);
+            dgvprodutos.DataSource = list;
+            this.dgvprodutos.Columns["id_funcionario"].Visible = false;
+
 
         }
 
@@ -90,7 +95,7 @@ namespace Projeto.Venda.Lolxss.view
         {
 
         }
-        
+
         private void limparcampos()
         {
             this.txtnome.Clear();
@@ -107,12 +112,7 @@ namespace Projeto.Venda.Lolxss.view
             productselected.marca = this.txtmarca.Text;
             productselected.quantidade = (int)this.quantidade.Value;
             bool resp = controller.update(productselected);
-
-            if (productselected.preco < 1 || productselected.quantidade < 0)
-            {
-                MessageBox.Show("produto nao pode ter preco menor do que 1 ou quantidade menor do que 0", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (resp)
+            if (resp)
             {
                 MessageBox.Show("curso atualizado com sucesso", "1155 do ET",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -167,18 +167,18 @@ namespace Projeto.Venda.Lolxss.view
                 productselected = null;
             }
         }
-        
+
         //manipular as paginas
         private void proximo_Click(object sender, EventArgs e)
         {
-            if(paginaatual < totaldepaginas)
+            if (paginaatual < totaldepaginas)
             {
-             paginaatual++;
+                paginaatual++;
                 atualizarlbl();
                 carregarprodutos();
             }
         }
-        
+
         private void atualizarlbl()
         {
             this.lbl.Text = $"{paginaatual} de {totaldepaginas}";
@@ -193,6 +193,18 @@ namespace Projeto.Venda.Lolxss.view
                 carregarprodutos();
             }
         }
-    
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //capturar numeros
+            this.totalporpagina = int.Parse(this.cbxquantidade.Text);
+            //recalcular paginas
+            carregarprodutos();
+        }
+
+        private void o(object sender, EventArgs e)
+        {
+
+        }
     }
 }
