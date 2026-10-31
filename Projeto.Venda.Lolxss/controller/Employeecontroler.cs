@@ -8,7 +8,7 @@ namespace Projeto.Venda.Lolxss.controller
     internal class Employeecontroler
     {
         public static bool login(string username, string password)
-        { 
+        {
             EmployeeRepository repository = new EmployeeRepository();
             employee? resp = repository.getbyusername(username);
             if (resp == null)
@@ -28,7 +28,7 @@ namespace Projeto.Venda.Lolxss.controller
             }
             catch (Exception ex)
             {
-                validatepassword =false;
+                validatepassword = false;
             }
             if (!validatepassword)
             {
@@ -38,6 +38,7 @@ namespace Projeto.Venda.Lolxss.controller
             session.userAuth = resp;
             return true;
         }
+
         public bool createEmployee(string nome, string usuario,
             string telefone, string senha, string rua, string numero, string complemento, string cep)
         {
@@ -59,14 +60,28 @@ namespace Projeto.Venda.Lolxss.controller
                 rua = rua,
                 numero = numero,
                 complemento = complemento,
-                  cep = cep
+                cep = cep
 
             };
             repository.Createemployee(funcionario);
             return true;
-
-            
         }
+
+        public employee? usuarioautenticado()
+        {
+            return session.userAuth;
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
-    
+
 }

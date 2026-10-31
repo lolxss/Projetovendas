@@ -1,4 +1,5 @@
-﻿using MySqlConnector;
+﻿
+using MySqlConnector;
 using Projeto.Venda.Lolxss.database;
 using Projeto.Venda.Lolxss.model;
 using System;

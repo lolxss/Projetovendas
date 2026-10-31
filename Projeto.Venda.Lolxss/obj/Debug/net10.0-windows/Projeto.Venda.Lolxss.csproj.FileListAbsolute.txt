@@ -23,3 +23,5 @@ C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\ob
 C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\bin\Debug\net10.0-windows\BCrypt-Net-Next.dll
 C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\obj\Debug\net10.0-windows\Projeto.Venda.Lolxss.view.frmLogin.resources
 C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\obj\Debug\net10.0-windows\Projeto.Venda.Lolxss.view.frmcadastro.resources
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\obj\Debug\net10.0-windows\Projeto.Venda.Lolxss.view.perfiluser.resources
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\obj\Debug\net10.0-windows\Projeto.Venda.Lolxss.sourcelink.json

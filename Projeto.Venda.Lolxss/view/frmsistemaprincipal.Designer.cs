@@ -36,6 +36,7 @@
             painelprincipal = new Panel();
             panel2 = new Panel();
             sair = new Button();
+            usuario = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             // 
             // sair
             // 
-            sair.Location = new Point(3, 353);
+            sair.Location = new Point(3, 436);
             sair.Name = "sair";
             sair.Size = new Size(112, 46);
             sair.TabIndex = 4;
@@ -105,11 +106,22 @@
             sair.UseVisualStyleBackColor = true;
             sair.Click += sair_Click;
             // 
+            // usuario
+            // 
+            usuario.Location = new Point(3, 346);
+            usuario.Name = "usuario";
+            usuario.Size = new Size(115, 51);
+            usuario.TabIndex = 5;
+            usuario.Text = "usuario";
+            usuario.UseVisualStyleBackColor = true;
+            usuario.Click += usuario_Click;
+            // 
             // frmsistemaprincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 595);
+            Controls.Add(usuario);
             Controls.Add(sair);
             Controls.Add(panel1);
             Controls.Add(cad_prod);
@@ -133,5 +145,6 @@
         private Panel painelprincipal;
         private Panel panel2;
         private Button sair;
+        private Button usuario;
     }
 }
