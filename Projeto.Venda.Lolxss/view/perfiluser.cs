@@ -40,7 +40,7 @@ namespace Projeto.Venda.Lolxss.view
             cepbox.Text = funcionario.cep;
             enderecobox.Text = funcionario.endereço;
 
-            usuariobox.Text = funcionario.usuario;
+          
 
    }    } 
 }

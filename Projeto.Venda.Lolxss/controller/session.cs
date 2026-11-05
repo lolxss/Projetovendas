@@ -7,7 +7,7 @@ namespace Projeto.Venda.Lolxss.controller
     internal static class session
     {
         public static employee? userAuth;
-        public static bool isADMIN = false;
+      
 
     }
 }

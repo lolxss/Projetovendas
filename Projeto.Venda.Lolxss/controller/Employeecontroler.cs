@@ -7,6 +7,13 @@ namespace Projeto.Venda.Lolxss.controller
 {
     internal class Employeecontroler
     {
+        private EmployeeRepository repository;
+        public Employeecontroler()
+        {
+            repository = new EmployeeRepository();
+
+        }
+
         public static bool login(string username, string password)
         {
             EmployeeRepository repository = new EmployeeRepository();
@@ -39,31 +46,20 @@ namespace Projeto.Venda.Lolxss.controller
             return true;
         }
 
-        public bool createEmployee(string nome, string usuario,
-            string telefone, string senha, string rua, string numero, string complemento, string cep)
+        public bool createEmployee(employee employee)
         {
             //fazer verificaçao se o usuario nao existe
             //solicitar ao repository se o suario existe ou nao
             EmployeeRepository repository = new EmployeeRepository();
-            employee? resp = repository.getbyusername(usuario);
+            employee? resp = repository.getbyusername(employee.usuario);
             if (resp != null)
             {
                 return false;
             }
-            string hash = BCrypt.Net.BCrypt.HashPassword(senha);
-            employee funcionario = new employee
-            {
-                nome = nome,
-                usuario = usuario,
-                telefone = telefone,
-                senha = hash,
-                rua = rua,
-                numero = numero,
-                complemento = complemento,
-                cep = cep
-
-            };
-            repository.Createemployee(funcionario);
+            string senha = BCrypt.Net.BCrypt.HashPassword(employee.senha);
+            employee.senha = senha;
+                       
+            repository.Createemployee(employee);
             return true;
         }
 
@@ -71,10 +67,22 @@ namespace Projeto.Venda.Lolxss.controller
         {
             return session.userAuth;
         }
+       
+        public List<employee> getAll()
+        {
+            return repository.getAllfuncionario();
 
+        }
 
+        public bool userADM()
+        {
+            if (session.userAuth == null)
+            {
+                return false;
 
-
+            }
+            return session.userAuth.ADM;
+        }
 
 
 

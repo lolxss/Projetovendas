@@ -19,10 +19,11 @@ namespace Projeto.Venda.Lolxss.repository
                 usuario = reader.GetString("usuario"),
                 senha = reader.GetString("senha"),
                 telefone = reader.GetString("telefone"),
-                rua = ( reader.IsDBNull(reader.GetOrdinal("rua"))) ? null : reader.GetString("rua"),
+                rua = (reader.IsDBNull(reader.GetOrdinal("rua"))) ? null : reader.GetString("rua"),
                 numero = reader.GetString("numero"),
-                complemento = (reader.IsDBNull(reader.GetOrdinal("complemento"))) ? null :reader.GetString("complemento"),
-                cep = reader.GetString("cep")
+                complemento = (reader.IsDBNull(reader.GetOrdinal("complemento"))) ? null : reader.GetString("complemento"),
+                cep = reader.GetString("cep"),
+                ADM = reader.GetBoolean("ADM")
             };
         }
         public employee? getbyusername(string username)
@@ -43,8 +44,8 @@ namespace Projeto.Venda.Lolxss.repository
         {
             using MySqlConnection connection = DataBase.GetConnection();
             string sql = @"insert INTO funcionario
-          (nome,usuario,telefone,senha,rua,numero,complemento,cep) VALUES
-           (@nome,@usuario,@telefone,@senha,@rua,@numero,@complemento,@cep)";
+          (nome,usuario,telefone,senha,rua,numero,complemento,cep, ADM) VALUES
+           (@nome,@usuario,@telefone,@senha,@rua,@numero,@complemento,@cep,@ADM)";
             using MySqlCommand cmd = new MySqlCommand(sql, connection);
             cmd.Parameters.AddWithValue("@nome", employee.nome);
             cmd.Parameters.AddWithValue("@usuario", employee.usuario);
@@ -54,8 +55,23 @@ namespace Projeto.Venda.Lolxss.repository
             cmd.Parameters.AddWithValue("@numero", employee.numero);
             cmd.Parameters.AddWithValue("@complemento",employee.complemento);
             cmd.Parameters.AddWithValue("@cep", employee.cep);
+            cmd.Parameters.AddWithValue("@ADM", employee.ADM);
             cmd.ExecuteNonQuery();
             return (int)cmd.LastInsertedId;
+        }
+        public List<employee> getAllfuncionario()
+        {
+            using MySqlConnection conector = DataBase.GetConnection();
+            string sql = "SELECT * FROM funcionario";
+            using MySqlCommand cmd = new MySqlCommand(sql, conector);
+            using var reader = cmd.ExecuteReader();
+            List<employee> list = new List<employee>();
+            while (reader.Read())
+            {
+                list.Add(map(reader));
+            }
+            return list;
+            //ExecuteReader() serve para comandos select
         }
     }
 }

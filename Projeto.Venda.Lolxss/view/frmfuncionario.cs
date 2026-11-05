@@ -1,19 +1,28 @@
 ﻿using Projeto.Venda.Lolxss.controller;
+using Projeto.Venda.Lolxss.model;
+using Projeto.Venda.Lolxss.repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
+
 
 namespace Projeto.Venda.Lolxss.view
 {
     public partial class frmfuncionario : Form
     {
+        private Employeecontroler controller;
+       
         public frmfuncionario()
         {
             InitializeComponent();
+            controller = new Employeecontroler();
+            this.cbxadm.SelectedIndex = 0;
+            
         }
 
         private void txtcomplemento_TextChanged(object sender, EventArgs e)
@@ -23,6 +32,7 @@ namespace Projeto.Venda.Lolxss.view
 
         private void frmfuncionario_Load(object sender, EventArgs e)
         {
+            carregarfuncionario();
 
         }
         private void txtusuario_TextChanged(object sender, EventArgs e)
@@ -52,20 +62,35 @@ namespace Projeto.Venda.Lolxss.view
             string usuario = txtusuario.Text;
             string senha = txtsenha.Text;
             string confirmarsenha = txtsenha2.Text;
+            bool adm = (this.cbxadm.SelectedIndex == 0)? false : true;
             if (senha != confirmarsenha)
             {
                 MessageBox.Show("senhas nao concidem",
                     "senhas sao diferentes",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
-                    return;
+
+                return;
             }
+            employee employee = new employee
+            {
+                nome = nome,
+                usuario = usuario,
+                telefone = telefone,
+                senha = senha,
+                rua = rua,
+                numero = numero,
+                complemento = complemento,
+                cep = cep,
+                ADM = adm
+
+            };
             //chamar o controador do usuario para criar cadastro
             Employeecontroler controller = new Employeecontroler();
-            bool resp = controller.createEmployee(nome, telefone, rua, complemento, cep, numero, usuario, senha);
+            bool resp = controller.createEmployee(employee);
             if (resp)
             {
                 MessageBox.Show("cadastrar com sucesso", "cadastro funcionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                carregarfuncionario();
                 limparcampos();
 
             }
@@ -73,6 +98,20 @@ namespace Projeto.Venda.Lolxss.view
             {
                 MessageBox.Show("erro ao cadastrar", "cadastro funcionario", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }    
+
+        }
+
+        private void dgvfuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+        private void carregarfuncionario()
+        {
+            List<employee> list = controller.getAll();
+            dgvfuncionario.DataSource = list;
+            this.dgvfuncionario.Columns["senha"].Visible = false;
+        }
+        
+        
     }
 }

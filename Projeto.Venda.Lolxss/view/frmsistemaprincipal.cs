@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Windows.Forms;
 namespace Projeto.Venda.Lolxss.view
@@ -23,9 +24,11 @@ namespace Projeto.Venda.Lolxss.view
 
         private void frmsistemaprincipal_Load(object sender, EventArgs e)
         {
-            //string usuario = session.usuario;
-            bool isADMIN = session.isADMIN;
-            //    this.lblusername.Text = usuario;
+            bool ADM = controller.userADM();
+            if (!ADM) 
+            { 
+                this.btncadfuncionario.Visible = false;
+            }
         }
         private void exibirfrm(Form formulario)
         {
