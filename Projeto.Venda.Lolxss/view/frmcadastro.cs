@@ -15,7 +15,7 @@ namespace Projeto.Venda.Lolxss.view
     {
         private productcontroller controller;
 
-        private product? productselected;
+        private Product? productselected;
 
         private int totaldepaginas = 5;
         private int paginaatual = 1;
@@ -30,10 +30,10 @@ namespace Projeto.Venda.Lolxss.view
         {
             string nome = this.txtnome.Text;
             string marca = this.txtmarca.Text;
-            float preco = float.Parse(this.txtpreco.Text);
+            int preco =Convert.ToInt32(this.txtpreco.Text);
             int quantidade = Convert.ToInt32(this.quantidade.Text);
             //enviar para o controller
-            product product = new product
+            Product product = new Product
             {
                 nome = nome,
                 marca = marca,
@@ -84,7 +84,7 @@ namespace Projeto.Venda.Lolxss.view
             atualizarlbl();
 
 
-            List<product> list = controller.listbypage(totalporpagina, paginaatual);
+            List<Product> list = controller.listbypage(totalporpagina, paginaatual);
             dgvprodutos.DataSource = list;
             this.dgvprodutos.Columns["id_funcionario"].Visible = false;
 
@@ -136,7 +136,7 @@ namespace Projeto.Venda.Lolxss.view
                 return;
             }
             DataGridViewRow line = this.dgvprodutos.Rows[e.RowIndex];
-            product? product = line.DataBoundItem as product;
+            Product? product = line.DataBoundItem as Product;
 
             this.txtnome.Text = product.nome;
             this.txtmarca.Text = product.marca;

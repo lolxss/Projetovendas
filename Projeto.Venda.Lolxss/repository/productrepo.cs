@@ -10,20 +10,21 @@ namespace Projeto.Venda.Lolxss.repository
 {
     internal class productrepo
     {
-        private product map(MySqlDataReader reader)
+        private Product map(MySqlDataReader reader)
         {
-            return new product
+            return new Product
             {
                 id_funcionario = reader.GetInt32("id_funcionario"),
                 cod_prod = reader.GetInt32("cod_prod"),
                 nome = reader.GetString("nome"),
                 marca = reader.GetString("marca"),
-                preco = reader.GetFloat("preco"),
+                preco = reader.GetInt32("preco"),
                 quantidade = reader.GetInt32("quantidade"),
 
             };
         }
-        public int Createproduct(product product)
+        
+        public int Createproduct(Product product)
         {
             using MySqlConnection connection = DataBase.GetConnection();
             string sql = @"insert INTO produtos
@@ -40,13 +41,13 @@ namespace Projeto.Venda.Lolxss.repository
             // cmd.ExecuteNonQuery(); use quand tem a ver quando preciso manipular os dados
         }
 
-        public List<product> getAll()
+        public List<Product> getAll()
         {
             using MySqlConnection conector = DataBase.GetConnection();
             string sql = "SELECT * FROM produtos";
             using MySqlCommand cmd = new MySqlCommand(sql, conector);
             using var reader = cmd.ExecuteReader();
-            List<product> list = new List<product>();
+            List<Product> list = new List<Product>();
             while (reader.Read())
             {
                 list.Add(map(reader));
@@ -55,7 +56,7 @@ namespace Projeto.Venda.Lolxss.repository
             //ExecuteReader() serve para comandos select
         }
 
-        public List<product> listperpage(int quantity, int page)
+        public List<Product> listperpage(int quantity, int page)
         {
             int offset = quantity * (page - 1);
             using MySqlConnection conector = DataBase.GetConnection();
@@ -65,7 +66,7 @@ namespace Projeto.Venda.Lolxss.repository
             cmd.Parameters.AddWithValue("@offset", offset);
             using var reader = cmd.ExecuteReader();
 
-            List<product> list = new List<product>();
+            List<Product> list = new List<Product>();
             while (reader.Read())
             {
                 list.Add(map(reader));
@@ -80,7 +81,7 @@ namespace Projeto.Venda.Lolxss.repository
             return Convert.ToInt32(cmd.ExecuteScalar());
         }
 
-        public bool update(product product)
+        public bool update(Product product)
         {
             using MySqlConnection connection = DataBase.GetConnection();
             string sql = @"UPDATE produtos SET

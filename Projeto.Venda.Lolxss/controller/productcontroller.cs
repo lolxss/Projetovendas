@@ -10,7 +10,7 @@ namespace Projeto.Venda.Lolxss.controller
 {
     internal class productcontroller
     {
-        public bool createproduct(product product)
+        public bool createproduct(Product product)
         {
             int id_funcionario = session.userAuth.id_funcionario;
             product.id_funcionario = id_funcionario;
@@ -26,12 +26,12 @@ namespace Projeto.Venda.Lolxss.controller
             repository = new productrepo();
        
         }
-        public List<product> getAll()
+        public List<Product> listproducts()
         {
             return repository.getAll();
         }
 
-        public List<product> listbypage(int quantity, int page)
+        public List<Product> listbypage(int quantity, int page)
         {
             return repository.listperpage(quantity, page);
         }
@@ -42,12 +42,12 @@ namespace Projeto.Venda.Lolxss.controller
             return (int)Math.Ceiling((decimal)productquantity / itemsquantity);
         }
         
-        public bool update(product product)
+        public bool update(Product product)
         {
             return repository.update(product);  
         }
 
-        public bool delete(product product)
+        public bool delete(Product product)
         {
             return repository.delete(product.cod_prod);
         }

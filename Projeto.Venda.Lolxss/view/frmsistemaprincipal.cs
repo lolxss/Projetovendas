@@ -25,8 +25,8 @@ namespace Projeto.Venda.Lolxss.view
         private void frmsistemaprincipal_Load(object sender, EventArgs e)
         {
             bool ADM = controller.userADM();
-            if (!ADM) 
-            { 
+            if (!ADM)
+            {
                 this.btncadfuncionario.Visible = false;
             }
         }
@@ -71,6 +71,12 @@ namespace Projeto.Venda.Lolxss.view
         private void usuario_Click(object sender, EventArgs e)
         {
             perfiluser frm = new perfiluser();
+            exibirfrm(frm);
+        }
+
+        private void cad_venda_Click(object sender, EventArgs e)
+        {
+            frmcadproduto frm = new frmcadproduto();
             exibirfrm(frm);
         }
     }

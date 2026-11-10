@@ -37,6 +37,7 @@
             panel2 = new Panel();
             sair = new Button();
             usuario = new Button();
+            cad_venda = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             // cad_prod
             // 
-            cad_prod.Location = new Point(3, 260);
+            cad_prod.Location = new Point(3, 369);
             cad_prod.Name = "cad_prod";
             cad_prod.Size = new Size(115, 71);
             cad_prod.TabIndex = 2;
@@ -98,7 +99,7 @@
             // 
             // sair
             // 
-            sair.Location = new Point(3, 436);
+            sair.Location = new Point(3, 515);
             sair.Name = "sair";
             sair.Size = new Size(112, 46);
             sair.TabIndex = 4;
@@ -108,7 +109,7 @@
             // 
             // usuario
             // 
-            usuario.Location = new Point(3, 346);
+            usuario.Location = new Point(3, 458);
             usuario.Name = "usuario";
             usuario.Size = new Size(115, 51);
             usuario.TabIndex = 5;
@@ -116,11 +117,22 @@
             usuario.UseVisualStyleBackColor = true;
             usuario.Click += usuario_Click;
             // 
+            // cad_venda
+            // 
+            cad_venda.Location = new Point(3, 270);
+            cad_venda.Name = "cad_venda";
+            cad_venda.Size = new Size(115, 62);
+            cad_venda.TabIndex = 6;
+            cad_venda.Text = "cad_venda";
+            cad_venda.UseVisualStyleBackColor = true;
+            cad_venda.Click += cad_venda_Click;
+            // 
             // frmsistemaprincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 595);
+            Controls.Add(cad_venda);
             Controls.Add(usuario);
             Controls.Add(sair);
             Controls.Add(panel1);
@@ -146,5 +158,6 @@
         private Panel panel2;
         private Button sair;
         private Button usuario;
+        private Button cad_venda;
     }
 }

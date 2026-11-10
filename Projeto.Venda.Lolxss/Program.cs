@@ -9,9 +9,9 @@ namespace Projeto.Venda.Lolxss
         {
 
             ApplicationConfiguration.Initialize();
-            //Application.Run(new frmfuncionario());
+            Application.Run(new frmcadproduto());
 
-            while (true) 
+            while (false) 
             { 
              using (frmLogin login = new frmLogin())
              {
