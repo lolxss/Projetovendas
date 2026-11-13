@@ -1,12 +1,5 @@
 ﻿using Projeto.Venda.Lolxss.controller;
 using Projeto.Venda.Lolxss.model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 
 namespace Projeto.Venda.Lolxss.view
 {
@@ -114,6 +107,11 @@ namespace Projeto.Venda.Lolxss.view
         {
             Product product = this.cbxprodutos.SelectedItem as Product;
             int quantidade = (int)this.numquantidade.Value;
+            if(quantidade < 1)
+            {
+                MessageBox.Show("produto no estoque zerado");
+                    return;
+            }
 
             item? itemExistente = this.carrinho.FirstOrDefault(item => item.cod_prod == product.cod_prod);
             if (itemExistente == null)
