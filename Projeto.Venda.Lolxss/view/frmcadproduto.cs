@@ -13,12 +13,14 @@ namespace Projeto.Venda.Lolxss.view
     public partial class frmcadproduto : Form
     {
         private productcontroller ProductController;
+        private Vendacontroller vendacontroller;
         private List<item> carrinho = new List<item>();
 
         public frmcadproduto()
         {
             InitializeComponent();
             ProductController = new productcontroller();
+            vendacontroller = new Vendacontroller();
         }
 
         private void carregarProdutos()
@@ -45,6 +47,22 @@ namespace Projeto.Venda.Lolxss.view
                 Name = "coluna quantidade",
                 DataPropertyName = "quantidade"
             });
+
+            this.dgvcompras.Columns.Add(
+                new DataGridViewButtonColumn
+                {
+                    HeaderText = "Excluir",
+                    Name = "Coluna excluir",
+                    Text = "Excluir",
+                    UseColumnTextForButtonValue = true
+
+
+                });
+
+
+
+
+
             this.dgvcompras.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "preço unitario",
@@ -86,8 +104,7 @@ namespace Projeto.Venda.Lolxss.view
 
         public void atualizarcarrinho()
         {
-            this.dgvcompras.DataSource = null;
-            this.dgvcompras.DataSource = this.carrinho;
+            this.dgvcompras.DataSource = this.carrinho.ToList();
             this.btncadastrar.Enabled = this.carrinho.Count() > 0;
             decimal total = this.carrinho.Sum(item => item.sub_total);
             this.precototal.Text = $"Total da venda: {total:C2}";
@@ -97,7 +114,7 @@ namespace Projeto.Venda.Lolxss.view
         {
             Product product = this.cbxprodutos.SelectedItem as Product;
             int quantidade = (int)this.numquantidade.Value;
-            
+
             item? itemExistente = this.carrinho.FirstOrDefault(item => item.cod_prod == product.cod_prod);
             if (itemExistente == null)
             {
@@ -118,24 +135,68 @@ namespace Projeto.Venda.Lolxss.view
             product.quantidade -= quantidade;
             this.cbxprodutos.SelectedItem = product;
             comboBox1_SelectedIndexChanged(this, EventArgs.Empty);
-            
+
             atualizarcarrinho();
         }
 
         private void btncadastrar_Click(object sender, EventArgs e)
         {
             decimal total = this.carrinho.Sum(item => item.sub_total);
-            DialogResult confirmer = MessageBox.Show($"deseja efetuar a venda no valor{total}","confirmar venda",
+            DialogResult confirmer = MessageBox.Show($"deseja efetuar a venda no valor{total}", "confirmar venda",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirmer == DialogResult.No) 
+            if (confirmer == DialogResult.No)
             {
                 return;
             }
             //enviar dados para o controle
-            carrinho.Clear();
-            frmcadproduto_Load(this, EventArgs.Empty);
-            MessageBox.Show("venda cadastrada com sucesso!!!");
+
+            try
+            {
+                bool resposta = vendacontroller.cadastrarVenda(this.carrinho);
+                if (resposta)
+                {
+                    carrinho.Clear();
+                    frmcadproduto_Load(this, EventArgs.Empty);
+                    MessageBox.Show("venda cadastrada com sucesso!!!", "cadastro da venda");
+
+                }
+                else
+                {
+                    MessageBox.Show("erro ao cadastrar venda", "erro cadastro venda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro no cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void dgvcompras_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
+            if (this.dgvcompras.Columns[e.ColumnIndex].Name == "Coluna excluir")
+            {
+
+                exluiritemcarrinho(e.RowIndex);
+               
+            }
           
+        }
+        private void exluiritemcarrinho(int indice)
+        {
+           
+            DialogResult confirmer = MessageBox.Show($"deseja exluir o item?", "excluir item",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmer == DialogResult.No)
+            {
+                return;
+            }
+            this.carrinho.RemoveAt(indice);
+            atualizarcarrinho();
+            //excluir o item
         }
     }
 }

@@ -80,10 +80,11 @@
             // dgvcompras
             // 
             dgvcompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvcompras.Location = new Point(21, 97);
+            dgvcompras.Location = new Point(21, 100);
             dgvcompras.Name = "dgvcompras";
             dgvcompras.Size = new Size(578, 259);
             dgvcompras.TabIndex = 4;
+            dgvcompras.CellContentDoubleClick += dgvcompras_CellContentDoubleClick;
             // 
             // lblquantidade
             // 
