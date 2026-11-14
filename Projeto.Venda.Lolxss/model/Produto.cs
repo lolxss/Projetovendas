@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Projeto.Venda.Lolxss.model
 {
-    internal class Product
+    internal class Produto
     {
         public int cod_prod { get; set; }
         public string nome { get; set; }
@@ -16,7 +16,7 @@ namespace Projeto.Venda.Lolxss.model
         public DateTime dat_registro { get; set; }
         public decimal precoreal => this.preco / 100m;
 
-        public void validar()
+        public void Validar()
         {
             if(preco <= 0)
             {

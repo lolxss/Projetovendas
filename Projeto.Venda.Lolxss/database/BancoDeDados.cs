@@ -5,13 +5,13 @@ using System.Text;
 
 namespace Projeto.Venda.Lolxss.database
 {
-    internal static class DataBase
+    internal static class BancoDeDados
     {
-        private static string stringconnection;
+        private static string TextoDeConexao;
 
-        static DataBase()
+        static BancoDeDados()
         {
-            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder
+            MySqlConnectionStringBuilder contrutor = new MySqlConnectionStringBuilder
             {
                 Server = "localhost",
                 Port = 3306,
@@ -20,22 +20,22 @@ namespace Projeto.Venda.Lolxss.database
                 Password = ""
 
             };
-            stringconnection = builder.ConnectionString;
+            TextoDeConexao = contrutor.ConnectionString;
         }
-        public static MySqlConnection GetConnection()
+        public static MySqlConnection Conexao()
         {
-            MySqlConnection connection = new MySqlConnection(stringconnection);
+            MySqlConnection conexão = new MySqlConnection(TextoDeConexao);
 
             try
             {
                 //try execute something 
-                connection.Open();
-                return connection;
+                conexão.Open();
+                return conexão;
             }
             catch (MySqlException ex)
             {
                 //if doesnt work
-                connection.Dispose();
+                conexão.Dispose();
                 throw;
             }
 

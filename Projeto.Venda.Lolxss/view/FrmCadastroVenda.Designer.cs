@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class frmcadproduto
+    partial class frmCadastroVenda
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,7 @@
             numquantidade.Size = new Size(120, 23);
             numquantidade.TabIndex = 8;
             // 
-            // frmcadproduto
+            // frmCadastroVenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -136,8 +136,8 @@
             Controls.Add(btnadicionar);
             Controls.Add(label2);
             Controls.Add(lblprecounitario);
-            Name = "frmcadproduto";
-            Text = "frmcadproduto";
+            Name = "frmCadastroVenda";
+            Text = "frmCadastroVenda";
             Load += frmcadproduto_Load;
             ((System.ComponentModel.ISupportInitialize)dgvcompras).EndInit();
             ((System.ComponentModel.ISupportInitialize)numquantidade).EndInit();

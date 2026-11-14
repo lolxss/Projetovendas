@@ -2,7 +2,7 @@ using Projeto.Venda.Lolxss.view;
 
 namespace Projeto.Venda.Lolxss
 {
-    internal static class Program
+    internal static class Programa
     {
         [STAThread]
         static void Main()
@@ -13,17 +13,17 @@ namespace Projeto.Venda.Lolxss
 
             while (true) 
             { 
-             using (frmLogin login = new frmLogin())
+             using (FrmSessão sessão = new FrmSessão())
              {
-                if (login.ShowDialog() != DialogResult.OK)
+                if (sessão.ShowDialog() != DialogResult.OK)
                 {
                         break;
-                    //Application.Run(new frmsistemaprincipal());
+                    //Application.Run(new FrmSistemaPrincipal());
 
 
                 }
              }
-                using (frmsistemaprincipal principal = new frmsistemaprincipal())
+                using (FrmSistemaPrincipal principal = new FrmSistemaPrincipal())
                 {
                     Application.Run(principal);
                     if(principal.DialogResult != DialogResult.Retry)

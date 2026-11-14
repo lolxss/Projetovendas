@@ -1,4 +1,4 @@
-﻿using Projeto.Venda.Lolxss.controller;
+﻿using Projeto.Venda.Lolxss.Controle;
 using Projeto.Venda.Lolxss.model;
 using Projeto.Venda.Lolxss.repository;
 using System;
@@ -13,30 +13,21 @@ using System.Windows.Forms;
 
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class frmfuncionario : Form
+    public partial class frmCadastroFuncionario : Form
     {
-        private Employeecontroler controller;
+        private ControleFuncionario Controle;
        
-        public frmfuncionario()
+        public frmCadastroFuncionario()
         {
             InitializeComponent();
-            controller = new Employeecontroler();
+            Controle = new ControleFuncionario();
             this.cbxadm.SelectedIndex = 0;
             
         }
 
-        private void txtcomplemento_TextChanged(object sender, EventArgs e)
+        private void FrmFuncionario_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void frmfuncionario_Load(object sender, EventArgs e)
-        {
-            carregarfuncionario();
-
-        }
-        private void txtusuario_TextChanged(object sender, EventArgs e)
-        {
+            CarregarFuncionario();
 
         }
         private void limparcampos()
@@ -71,7 +62,7 @@ namespace Projeto.Venda.Lolxss.view
 
                 return;
             }
-            employee employee = new employee
+            Funcionario funcionario = new Funcionario
             {
                 nome = nome,
                 usuario = usuario,
@@ -85,12 +76,12 @@ namespace Projeto.Venda.Lolxss.view
 
             };
             //chamar o controador do usuario para criar cadastro
-            Employeecontroler controller = new Employeecontroler();
-            bool resp = controller.createEmployee(employee);
+            ControleFuncionario controller = new ControleFuncionario();
+            bool resp = controller.CriarFuncionario(funcionario);
             if (resp)
             {
                 MessageBox.Show("cadastrar com sucesso", "cadastro funcionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                carregarfuncionario();
+                CarregarFuncionario();
                 limparcampos();
 
             }
@@ -100,15 +91,10 @@ namespace Projeto.Venda.Lolxss.view
             }
 
         }
-
-        private void dgvfuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void CarregarFuncionario()
         {
-            
-        }
-        private void carregarfuncionario()
-        {
-            List<employee> list = controller.getAll();
-            dgvfuncionario.DataSource = list;
+            List<Funcionario> lista = Controle.PegueTudo();
+            dgvfuncionario.DataSource = lista;
             this.dgvfuncionario.Columns["senha"].Visible = false;
         }
         

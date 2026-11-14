@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class frmfuncionario
+    partial class frmCadastroFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmfuncionario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroFuncionario));
             txtnome = new TextBox();
             txtsenha = new TextBox();
             txttelefone = new TextBox();
@@ -84,7 +84,6 @@
             txtusuario.PlaceholderText = "usuario";
             txtusuario.Size = new Size(120, 23);
             txtusuario.TabIndex = 6;
-            txtusuario.TextChanged += txtusuario_TextChanged;
             // 
             // txtnumero
             // 
@@ -101,7 +100,6 @@
             txtcomplemento.PlaceholderText = "complemento";
             txtcomplemento.Size = new Size(84, 23);
             txtcomplemento.TabIndex = 4;
-            txtcomplemento.TextChanged += txtcomplemento_TextChanged;
             // 
             // txtcep
             // 
@@ -139,7 +137,6 @@
             dgvfuncionario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvfuncionario.Size = new Size(674, 256);
             dgvfuncionario.TabIndex = 10;
-            dgvfuncionario.CellContentClick += dgvfuncionario_CellContentClick;
             // 
             // cbxadm
             // 
@@ -151,7 +148,7 @@
             cbxadm.Size = new Size(121, 23);
             cbxadm.TabIndex = 11;
             // 
-            // frmfuncionario
+            // frmCadastroFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -169,9 +166,9 @@
             Controls.Add(txtsenha);
             Controls.Add(txtnome);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "frmfuncionario";
-            Text = "frmfuncionario";
-            Load += frmfuncionario_Load;
+            Name = "frmCadastroFuncionario";
+            Text = "frmCadastroFuncionario";
+            Load += FrmFuncionario_Load;
             ((System.ComponentModel.ISupportInitialize)dgvfuncionario).EndInit();
             ResumeLayout(false);
             PerformLayout();

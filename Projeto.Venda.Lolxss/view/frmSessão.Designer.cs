@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class frmLogin
+    partial class FrmSessão
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSessão));
             txtuser = new TextBox();
             txtpassword = new TextBox();
             button1 = new Button();
-            lblinfo = new Label();
             SuspendLayout();
             // 
             // txtuser
@@ -58,26 +57,16 @@
             button1.Name = "button1";
             button1.Size = new Size(76, 24);
             button1.TabIndex = 2;
-            button1.Text = "login";
+            button1.Text = "Sessão";
             button1.UseVisualStyleBackColor = true;
             button1.Click += btn_entrar;
             // 
-            // lblinfo
-            // 
-            lblinfo.AutoSize = true;
-            lblinfo.Location = new Point(120, 229);
-            lblinfo.Name = "lblinfo";
-            lblinfo.Size = new Size(41, 15);
-            lblinfo.TabIndex = 3;
-            lblinfo.Text = "lblinfo";
-            // 
-            // frmLogin
+            // FrmSessão
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(259, 308);
-            Controls.Add(lblinfo);
             Controls.Add(button1);
             Controls.Add(txtpassword);
             Controls.Add(txtuser);
@@ -86,9 +75,9 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "frmLogin";
+            Name = "FrmSessão";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "login";
+            Text = "Sessão";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -98,6 +87,5 @@
         private TextBox txtuser;
         private TextBox txtpassword;
         private Button button1;
-        private Label lblinfo;
     }
 }

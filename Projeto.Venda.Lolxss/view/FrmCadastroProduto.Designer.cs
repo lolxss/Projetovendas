@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class frmcadastro
+    partial class FrmCadastroProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmcadastro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroProduto));
             txtpreco = new TextBox();
             txtmarca = new TextBox();
             txtnome = new TextBox();
@@ -120,8 +120,6 @@
             dgvprodutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvprodutos.Size = new Size(802, 440);
             dgvprodutos.TabIndex = 9;
-            dgvprodutos.CellContentClick += dgvprodutos_CellContentClick;
-            dgvprodutos.CellContentDoubleClick += dgvprodutos_CellContentDoubleClick;
             dgvprodutos.CellDoubleClick += dgvprodutos_CellDoubleClick;
             // 
             // atualizar
@@ -186,7 +184,7 @@
             cbxquantidade.TabIndex = 15;
             cbxquantidade.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // frmcadastro
+            // FrmCadastroProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -206,9 +204,8 @@
             Controls.Add(txtmarca);
             Controls.Add(txtpreco);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "frmcadastro";
+            Name = "FrmCadastroProduto";
             Text = "frmvenda";
-            Load += o;
             ((System.ComponentModel.ISupportInitialize)quantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvprodutos).EndInit();
             ResumeLayout(false);

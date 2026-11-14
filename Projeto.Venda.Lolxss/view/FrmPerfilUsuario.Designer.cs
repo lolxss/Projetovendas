@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class perfiluser
+    partial class FrmPerfilUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -183,7 +183,7 @@
             enderecobox.Size = new Size(95, 23);
             enderecobox.TabIndex = 17;
             // 
-            // perfiluser
+            // FrmPerfilUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -205,8 +205,8 @@
             Controls.Add(aq);
             Controls.Add(se);
             Controls.Add(bv);
-            Name = "perfiluser";
-            Text = "perfiluser";
+            Name = "FrmPerfilUsuario";
+            Text = "FrmPerfilUsuario";
             ResumeLayout(false);
             PerformLayout();
         }

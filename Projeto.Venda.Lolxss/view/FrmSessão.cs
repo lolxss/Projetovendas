@@ -5,12 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Projeto.Venda.Lolxss.controller;
+using Projeto.Venda.Lolxss.Controle;
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class frmLogin : Form
+    public partial class FrmSessão : Form
     {
-        public frmLogin()
+        public FrmSessão()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace Projeto.Venda.Lolxss.view
             string senha = this.txtpassword.Text;
 
 
-            if (Employeecontroler.login(usuario, senha))
+            if (ControleFuncionario.Sessão(usuario, senha))
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -32,7 +32,7 @@ namespace Projeto.Venda.Lolxss.view
             else
             {
                 MessageBox.Show("usuario ou senha nao identificados",
-                    "erro de login",
+                    "erro de Sessão",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }

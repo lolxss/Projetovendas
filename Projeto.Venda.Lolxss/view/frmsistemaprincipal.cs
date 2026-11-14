@@ -1,4 +1,4 @@
-﻿using Projeto.Venda.Lolxss.controller;
+﻿using Projeto.Venda.Lolxss.Controle;
 using Projeto.Venda.Lolxss.model;
 using System;
 using System.Collections.Generic;
@@ -10,27 +10,27 @@ using System.Text;
 using System.Windows.Forms;
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class frmsistemaprincipal : Form
+    public partial class FrmSistemaPrincipal : Form
     {
-        private Employeecontroler controller;
-        public frmsistemaprincipal()
+        private ControleFuncionario Controle;
+        public FrmSistemaPrincipal()
         {
             InitializeComponent();
-            controller = new Employeecontroler();
-            employee? funcionario = controller.usuarioautenticado();
+            Controle = new ControleFuncionario();
+            Funcionario? funcionario = Controle.UsuarioAutenticado();
             string nome = (funcionario != null) ? funcionario.nome : "";
             this.Text += $"- {nome}";
         }
 
         private void frmsistemaprincipal_Load(object sender, EventArgs e)
         {
-            bool ADM = controller.userADM();
+            bool ADM = Controle.UsuarioAdministrador();
             if (!ADM)
             {
                 this.btncadfuncionario.Visible = false;
             }
         }
-        private void exibirfrm(Form formulario)
+        private void ExibirFrm(Form formulario)
         {
             while (painelprincipal.Controls.Count > 0)
             {
@@ -45,14 +45,14 @@ namespace Projeto.Venda.Lolxss.view
 
         private void btncadfuncionario_Click(object sender, EventArgs e)
         {
-            frmfuncionario frm = new frmfuncionario();
-            exibirfrm(frm);
+            frmCadastroFuncionario frm = new frmCadastroFuncionario();
+            ExibirFrm(frm);
         }
 
         private void cad_prod_Click(object sender, EventArgs e)
         {
-            frmcadastro frm = new frmcadastro();
-            exibirfrm(frm);
+            FrmCadastroProduto frm = new FrmCadastroProduto();
+            ExibirFrm(frm);
 
         }
 
@@ -70,14 +70,14 @@ namespace Projeto.Venda.Lolxss.view
 
         private void usuario_Click(object sender, EventArgs e)
         {
-            perfiluser frm = new perfiluser();
-            exibirfrm(frm);
+            FrmPerfilUsuario frm = new FrmPerfilUsuario();
+            ExibirFrm(frm);
         }
 
         private void cad_venda_Click(object sender, EventArgs e)
         {
-            frmcadproduto frm = new frmcadproduto();
-            exibirfrm(frm);
+            frmCadastroVenda frm = new frmCadastroVenda();
+            ExibirFrm(frm);
         }
     }
 }

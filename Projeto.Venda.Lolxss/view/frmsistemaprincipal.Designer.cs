@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class frmsistemaprincipal
+    partial class FrmSistemaPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmsistemaprincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSistemaPrincipal));
             lblusername = new Label();
             btncadfuncionario = new Button();
             cad_prod = new Button();
@@ -127,7 +127,7 @@
             cad_venda.UseVisualStyleBackColor = true;
             cad_venda.Click += cad_venda_Click;
             // 
-            // frmsistemaprincipal
+            // FrmSistemaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -140,7 +140,7 @@
             Controls.Add(btncadfuncionario);
             Controls.Add(lblusername);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "frmsistemaprincipal";
+            Name = "FrmSistemaPrincipal";
             Text = "sistema";
             Load += frmsistemaprincipal_Load;
             panel1.ResumeLayout(false);

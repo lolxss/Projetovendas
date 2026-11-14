@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projeto.Venda.Lolxss.model
 {
-    internal class item
+    internal class Item
     {
         public int cod_itens {  get; set; }
         public int cod_prod { get; set; }

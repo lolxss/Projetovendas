@@ -1,4 +1,4 @@
-﻿using Projeto.Venda.Lolxss.controller;
+﻿using Projeto.Venda.Lolxss.Controle;
 using Projeto.Venda.Lolxss.model;
 using Projeto.Venda.Lolxss.repository;
 using System;
@@ -11,29 +11,28 @@ using System.Windows.Forms;
 
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class frmcadastro : Form
+    public partial class FrmCadastroProduto : Form
     {
-        private productcontroller controller;
+        private Controleproduto Controle;
 
-        private Product? productselected;
+        private Produto? ProdutoSelecionado;
 
-        private int totaldepaginas = 5;
-        private int paginaatual = 1;
+        private int TotalDePaginas = 5;
+        private int PaginaAtual = 1;
         private int totalporpagina = 5;
-        public frmcadastro()
+        public FrmCadastroProduto()
         {
             InitializeComponent();
-            controller = new productcontroller();
+            Controle = new Controleproduto();
         }
-
         private void btn_cad_Click(object sender, EventArgs e)
         {
             string nome = this.txtnome.Text;
             string marca = this.txtmarca.Text;
             int preco =Convert.ToInt32(this.txtpreco.Text);
             int quantidade = Convert.ToInt32(this.quantidade.Text);
-            //enviar para o controller
-            Product product = new Product
+            //enviar para o Controle
+            Produto Produto = new Produto
             {
                 nome = nome,
                 marca = marca,
@@ -42,12 +41,12 @@ namespace Projeto.Venda.Lolxss.view
             };
             try
             {
-            bool resp = controller.createproduct(product);
+            bool resp = Controle.CriarProduto(Produto);
                 if (resp)
                 {
                     MessageBox.Show("cadastrar com sucesso", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    carregarprodutos();
-                    limparcampos();
+                    CarregarProdutos();
+                    LimparCampos();
 
 
                 }
@@ -55,7 +54,7 @@ namespace Projeto.Venda.Lolxss.view
                 {
                     MessageBox.Show("erro ao cadastrar", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                carregarprodutos();
+                CarregarProdutos();
             }
             catch(Exception ex) 
             {
@@ -64,85 +63,70 @@ namespace Projeto.Venda.Lolxss.view
             }
            
         }
-
         private void frmcadastro_Load(object sender, EventArgs e)
         {
             //finalizar produtos
             this.cbxquantidade.SelectedIndex = 0;
-            carregarprodutos();
-            //int pages = controller.quantitybypage(5);S
+            CarregarProdutos();
+            //int pages = Controle.QuantidadePorPagina(5);S
             //lbl.Text = $" 1 de {pages}";
         }
-
-        private void carregarprodutos()
+        private void CarregarProdutos()
         {
-            totaldepaginas = controller.quantitybypage(totalporpagina);
-            if (paginaatual > totaldepaginas)
+            TotalDePaginas = Controle.QuantidadePorPagina(totalporpagina);
+            if (PaginaAtual > TotalDePaginas)
             {
-                paginaatual = totaldepaginas;
+                PaginaAtual = TotalDePaginas;
             }
-            atualizarlbl();
+            atualizarLbl();
 
 
-            List<Product> list = controller.listbypage(totalporpagina, paginaatual);
+            List<Produto> list = Controle.ListarPelaPagina(totalporpagina, PaginaAtual);
             dgvprodutos.DataSource = list;
             this.dgvprodutos.Columns["id_funcionario"].Visible = false;
 
 
         }
-
-        private void dgvprodutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void limparcampos()
+        private void LimparCampos()
         {
             this.txtnome.Clear();
             this.txtmarca.Clear();
             this.txtpreco.Clear();
             this.quantidade.Value = 0;
         }
-
         private void atualizar_Click(object sender, EventArgs e)
         {
             //evento de atualizar
-            productselected.nome = this.txtnome.Text;
-            productselected.preco = Convert.ToInt32(this.txtpreco.Text);
-            productselected.marca = this.txtmarca.Text;
-            productselected.quantidade = (int)this.quantidade.Value;
-            bool resp = controller.update(productselected);
+            ProdutoSelecionado.nome = this.txtnome.Text;
+            ProdutoSelecionado.preco = Convert.ToInt32(this.txtpreco.Text);
+            ProdutoSelecionado.marca = this.txtmarca.Text;
+            ProdutoSelecionado.quantidade = (int)this.quantidade.Value;
+            bool resp = Controle.Atualizar(ProdutoSelecionado);
             if (resp)
             {
                 MessageBox.Show("curso atualizado com sucesso", "1155 do ET",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limparcampos();
-                carregarprodutos();
+                LimparCampos();
+                CarregarProdutos();
                 this.atualizar.Enabled = false;
                 this.excluir.Enabled = false;
             }
 
         }
-
-        private void dgvprodutos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgvprodutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1)
             {
                 return;
             }
-            DataGridViewRow line = this.dgvprodutos.Rows[e.RowIndex];
-            Product? product = line.DataBoundItem as Product;
+            DataGridViewRow linha = this.dgvprodutos.Rows[e.RowIndex];
+            Produto? produto = linha.DataBoundItem as Produto;
 
-            this.txtnome.Text = product.nome;
-            this.txtmarca.Text = product.marca;
-            this.txtpreco.Text = product.preco.ToString();
-            this.quantidade.Value = product.quantidade;
-            productselected = product;
+            this.txtnome.Text = produto.nome;
+            this.txtmarca.Text = produto.marca;
+            this.txtpreco.Text = produto.preco.ToString();
+            this.quantidade.Value = produto.quantidade;
+            ProdutoSelecionado = produto;
             this.atualizar.Enabled = true;
             this.excluir.Enabled = true;
             return;
@@ -150,12 +134,12 @@ namespace Projeto.Venda.Lolxss.view
 
         private void excluir_Click(object sender, EventArgs e)
         {
-            bool resp = controller.delete(productselected);
+            bool resp = Controle.Deletar(ProdutoSelecionado);
             if (resp)
             {
                 MessageBox.Show("produto deletado", "remoçao de produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limparcampos();
-                carregarprodutos();
+                LimparCampos();
+                CarregarProdutos();
                 this.atualizar.Enabled = false;
                 this.excluir.Enabled = false;
             }
@@ -164,33 +148,33 @@ namespace Projeto.Venda.Lolxss.view
                 MessageBox.Show("erro ao excluir o produto", "remoçao de produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.atualizar.Enabled = false;
                 this.excluir.Enabled = false;
-                productselected = null;
+                ProdutoSelecionado = null;
             }
         }
 
         //manipular as paginas
         private void proximo_Click(object sender, EventArgs e)
         {
-            if (paginaatual < totaldepaginas)
+            if (PaginaAtual < TotalDePaginas)
             {
-                paginaatual++;
-                atualizarlbl();
-                carregarprodutos();
+                PaginaAtual++;
+                atualizarLbl();
+                CarregarProdutos();
             }
         }
 
-        private void atualizarlbl()
+        private void atualizarLbl()
         {
-            this.lbl.Text = $"{paginaatual} de {totaldepaginas}";
+            this.lbl.Text = $"{PaginaAtual} de {TotalDePaginas}";
         }
 
         private void anterior_Click(object sender, EventArgs e)
         {
-            if (paginaatual > 1)
+            if (PaginaAtual > 1)
             {
-                paginaatual--;
-                atualizarlbl();
-                carregarprodutos();
+                PaginaAtual--;
+                atualizarLbl();
+                CarregarProdutos();
             }
         }
 
@@ -199,12 +183,7 @@ namespace Projeto.Venda.Lolxss.view
             //capturar numeros
             this.totalporpagina = int.Parse(this.cbxquantidade.Text);
             //recalcular paginas
-            carregarprodutos();
-        }
-
-        private void o(object sender, EventArgs e)
-        {
-
+            CarregarProdutos();
         }
     }
 }

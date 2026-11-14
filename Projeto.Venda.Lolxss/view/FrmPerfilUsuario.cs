@@ -1,4 +1,4 @@
-﻿using Projeto.Venda.Lolxss.controller;
+﻿using Projeto.Venda.Lolxss.Controle;
 using Projeto.Venda.Lolxss.model;
 using Projeto.Venda.Lolxss.repository;
 using System;
@@ -11,26 +11,26 @@ using System.Windows.Forms;
 
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class perfiluser : Form
+    public partial class FrmPerfilUsuario : Form
     {
-        private Employeecontroler controller;
-        private employee funcionario;
-        public perfiluser()
+        private ControleFuncionario controle;
+        private Funcionario funcionario;
+        public FrmPerfilUsuario()
         {
             InitializeComponent();
-            controller = new Employeecontroler();
-            frmusuarioload();
+            controle = new ControleFuncionario();
+            FrmUsuarioCarregar();
         }
 
-        private void frmusuarioload()
+        private void FrmUsuarioCarregar()
         {
-            funcionario = controller.usuarioautenticado();
+            funcionario = controle.UsuarioAutenticado();
             if (funcionario != null)
             {
-                carregardados();
+                CarregarDados();
             }
         }
-        private void carregardados()
+        private void CarregarDados()
         {
             nomebox.Text = funcionario.nome;
             usuariobox.Text = funcionario.usuario;

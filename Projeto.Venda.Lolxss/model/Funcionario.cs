@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projeto.Venda.Lolxss.model
 {
-    internal class employee
+    internal class Funcionario
     {
         public int id_funcionario {  get; set; }
         public string nome { get; set; }

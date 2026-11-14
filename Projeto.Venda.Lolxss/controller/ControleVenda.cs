@@ -3,20 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Projeto.Venda.Lolxss.controller
+namespace Projeto.Venda.Lolxss.Controle
 {
-    internal class Vendacontroller
+    internal class ControleVenda
     {
-        Employeecontroler employeecontroler;
+        ControleFuncionario ControleFuncionario;
 
-            public Vendacontroller()
+            public ControleVenda()
         {
-            employeecontroler = new Employeecontroler();
+            ControleFuncionario = new ControleFuncionario();
         }
 
-        public bool cadastrarVenda(List<item>itens)
+        public bool cadastrarVenda(List<Item>itens)
         {
-            employee? Employee = employeecontroler.usuarioautenticado();
+            Funcionario? Employee = ControleFuncionario.UsuarioAutenticado();
             if (Employee == null)
             {
                 throw new Exception("usuario nao autenticado");
@@ -24,7 +24,7 @@ namespace Projeto.Venda.Lolxss.controller
 
             }
             int id_funcionario = Employee.id_funcionario;
-            venda Venda = new venda
+            Vendas venda = new Vendas
             {
                 id_funcionario = id_funcionario,
                 itens = itens
