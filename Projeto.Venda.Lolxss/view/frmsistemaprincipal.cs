@@ -8,11 +8,15 @@ using System.Drawing;
 using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Windows.Forms;
+using Projeto.Venda.Lolxss.model;
 namespace Projeto.Venda.Lolxss.view
+
 {
     public partial class FrmSistemaPrincipal : Form
     {
+        
         private ControleFuncionario Controle;
+        private Funcionario funcionario;
         public FrmSistemaPrincipal()
         {
             InitializeComponent();
@@ -22,6 +26,7 @@ namespace Projeto.Venda.Lolxss.view
             this.Text += $"- {nome}";
         }
 
+
         private void frmsistemaprincipal_Load(object sender, EventArgs e)
         {
             bool ADM = Controle.UsuarioAdministrador();
@@ -29,6 +34,11 @@ namespace Projeto.Venda.Lolxss.view
             {
                 this.btncadfuncionario.Visible = false;
             }
+
+
+            lblnome.Text = Controle.UsuarioAutenticado()?.nome ?? "";
+
+
         }
         private void ExibirFrm(Form formulario)
         {
@@ -39,25 +49,23 @@ namespace Projeto.Venda.Lolxss.view
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
+
+            this.lblTitulo.Text = formulario.Text;
+
             painelprincipal.Controls.Add(formulario);
             formulario.Show();
         }
 
         private void btncadfuncionario_Click(object sender, EventArgs e)
         {
-            frmCadastroFuncionario frm = new frmCadastroFuncionario();
+            CadastroFuncionario frm = new CadastroFuncionario();
             ExibirFrm(frm);
         }
 
         private void cad_prod_Click(object sender, EventArgs e)
         {
-            FrmCadastroProduto frm = new FrmCadastroProduto();
+            CadastroProduto frm = new CadastroProduto();
             ExibirFrm(frm);
-
-        }
-
-        private void painelprincipal_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -70,14 +78,18 @@ namespace Projeto.Venda.Lolxss.view
 
         private void usuario_Click(object sender, EventArgs e)
         {
-            FrmPerfilUsuario frm = new FrmPerfilUsuario();
+            PerfilUsuario frm = new PerfilUsuario();
             ExibirFrm(frm);
+
         }
 
         private void cad_venda_Click(object sender, EventArgs e)
         {
-            frmCadastroVenda frm = new frmCadastroVenda();
+            CadastroVenda frm = new CadastroVenda();
             ExibirFrm(frm);
         }
+      
+
+
     }
 }

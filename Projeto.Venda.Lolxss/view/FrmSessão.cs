@@ -38,7 +38,5 @@ namespace Projeto.Venda.Lolxss.view
             }
 
         }
-
-       
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class FrmCadastroProduto
+    partial class CadastroProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroProduto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroProduto));
             txtpreco = new TextBox();
             txtmarca = new TextBox();
             txtnome = new TextBox();
@@ -43,37 +43,37 @@
             proximo = new Button();
             lbl = new Label();
             cbxquantidade = new ComboBox();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvprodutos).BeginInit();
             SuspendLayout();
             // 
             // txtpreco
             // 
-            txtpreco.Location = new Point(38, 71);
+            txtpreco.Location = new Point(23, 60);
             txtpreco.Name = "txtpreco";
             txtpreco.PlaceholderText = "00,00";
-            txtpreco.Size = new Size(135, 23);
+            txtpreco.Size = new Size(211, 23);
             txtpreco.TabIndex = 0;
             // 
             // txtmarca
             // 
-            txtmarca.Location = new Point(189, 12);
+            txtmarca.Location = new Point(240, 60);
             txtmarca.Name = "txtmarca";
-            txtmarca.PlaceholderText = "marca";
-            txtmarca.Size = new Size(130, 23);
+            txtmarca.Size = new Size(266, 23);
             txtmarca.TabIndex = 1;
             // 
             // txtnome
             // 
-            txtnome.Location = new Point(38, 12);
+            txtnome.Location = new Point(23, 19);
             txtnome.Name = "txtnome";
-            txtnome.PlaceholderText = "nome";
-            txtnome.Size = new Size(135, 23);
+            txtnome.Size = new Size(347, 23);
             txtnome.TabIndex = 2;
             // 
             // quantidade
             // 
-            quantidade.Location = new Point(189, 72);
+            quantidade.Location = new Point(376, 19);
             quantidade.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             quantidade.Name = "quantidade";
             quantidade.Size = new Size(130, 23);
@@ -82,26 +82,26 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(189, 53);
+            label1.Location = new Point(376, 1);
             label1.Name = "label1";
-            label1.Size = new Size(67, 15);
+            label1.Size = new Size(69, 15);
             label1.TabIndex = 5;
-            label1.Text = "quantidade";
+            label1.Text = "Quantidade";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(38, 53);
+            label2.Location = new Point(23, 45);
             label2.Name = "label2";
             label2.Size = new Size(37, 15);
             label2.TabIndex = 6;
-            label2.Text = "preco";
+            label2.Text = "Preço";
             // 
             // btn_cad
             // 
-            btn_cad.Location = new Point(339, 30);
+            btn_cad.Location = new Point(532, 19);
             btn_cad.Name = "btn_cad";
-            btn_cad.Size = new Size(75, 64);
+            btn_cad.Size = new Size(75, 70);
             btn_cad.TabIndex = 8;
             btn_cad.Text = "cadastro";
             btn_cad.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             dgvprodutos.AllowUserToDeleteRows = false;
             dgvprodutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvprodutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvprodutos.Location = new Point(21, 101);
+            dgvprodutos.Location = new Point(23, 100);
             dgvprodutos.MultiSelect = false;
             dgvprodutos.Name = "dgvprodutos";
             dgvprodutos.ReadOnly = true;
@@ -125,7 +125,7 @@
             // atualizar
             // 
             atualizar.Enabled = false;
-            atualizar.Location = new Point(429, 30);
+            atualizar.Location = new Point(624, 45);
             atualizar.Name = "atualizar";
             atualizar.Size = new Size(75, 23);
             atualizar.TabIndex = 10;
@@ -136,7 +136,7 @@
             // excluir
             // 
             excluir.Enabled = false;
-            excluir.Location = new Point(429, 70);
+            excluir.Location = new Point(624, 17);
             excluir.Name = "excluir";
             excluir.Size = new Size(75, 23);
             excluir.TabIndex = 11;
@@ -146,28 +146,29 @@
             // 
             // anterior
             // 
-            anterior.Location = new Point(72, 547);
+            anterior.Location = new Point(74, 546);
             anterior.Name = "anterior";
             anterior.Size = new Size(75, 23);
             anterior.TabIndex = 12;
-            anterior.Text = "<";
+            anterior.Text = "< Anterior";
             anterior.UseVisualStyleBackColor = true;
             anterior.Click += anterior_Click;
             // 
             // proximo
             // 
-            proximo.Location = new Point(732, 547);
+            proximo.Location = new Point(734, 546);
             proximo.Name = "proximo";
             proximo.Size = new Size(75, 23);
             proximo.TabIndex = 13;
-            proximo.Text = ">";
+            proximo.Text = "Proximo >";
             proximo.UseVisualStyleBackColor = true;
             proximo.Click += proximo_Click;
             // 
             // lbl
             // 
             lbl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl.Location = new Point(314, 557);
+            lbl.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl.Location = new Point(316, 556);
             lbl.Name = "lbl";
             lbl.Size = new Size(187, 23);
             lbl.TabIndex = 14;
@@ -178,17 +179,37 @@
             // 
             cbxquantidade.FormattingEnabled = true;
             cbxquantidade.Items.AddRange(new object[] { "10", "20", "50", "100" });
-            cbxquantidade.Location = new Point(599, 34);
+            cbxquantidade.Location = new Point(624, 71);
             cbxquantidade.Name = "cbxquantidade";
             cbxquantidade.Size = new Size(94, 23);
             cbxquantidade.TabIndex = 15;
             cbxquantidade.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // FrmCadastroProduto
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(23, 1);
+            label3.Name = "label3";
+            label3.Size = new Size(103, 15);
+            label3.TabIndex = 16;
+            label3.Text = "Nome do produto";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(240, 45);
+            label4.Name = "label4";
+            label4.Size = new Size(103, 15);
+            label4.TabIndex = 16;
+            label4.Text = "Marca do produto";
+            // 
+            // CadastroProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(848, 581);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(cbxquantidade);
             Controls.Add(lbl);
             Controls.Add(proximo);
@@ -228,5 +249,7 @@
         private Button proximo;
         private Label lbl;
         private ComboBox cbxquantidade;
+        private Label label3;
+        private Label label4;
     }
 }

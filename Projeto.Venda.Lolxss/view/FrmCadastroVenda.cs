@@ -3,13 +3,13 @@ using Projeto.Venda.Lolxss.model;
 
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class frmCadastroVenda : Form
+    public partial class CadastroVenda : Form
     {
         private Controleproduto ControleProduto;
         private ControleVenda VendaControle;
         private List<Item> carrinho = new List<Item>();
 
-        public frmCadastroVenda()
+        public CadastroVenda()
         {
             InitializeComponent();
             ControleProduto = new Controleproduto();

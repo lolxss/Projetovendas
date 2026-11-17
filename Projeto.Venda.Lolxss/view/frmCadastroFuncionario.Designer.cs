@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class frmCadastroFuncionario
+    partial class CadastroFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroFuncionario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroFuncionario));
             txtnome = new TextBox();
             txtsenha = new TextBox();
             txttelefone = new TextBox();
@@ -148,7 +148,7 @@
             cbxadm.Size = new Size(121, 23);
             cbxadm.TabIndex = 11;
             // 
-            // frmCadastroFuncionario
+            // CadastroFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;

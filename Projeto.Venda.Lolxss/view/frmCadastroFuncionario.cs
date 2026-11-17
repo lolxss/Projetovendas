@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class frmCadastroFuncionario : Form
+    public partial class CadastroFuncionario : Form
     {
         private ControleFuncionario Controle;
        
-        public frmCadastroFuncionario()
+        public CadastroFuncionario()
         {
             InitializeComponent();
             Controle = new ControleFuncionario();

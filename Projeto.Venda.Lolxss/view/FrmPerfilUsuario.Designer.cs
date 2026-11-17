@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class FrmPerfilUsuario
+    partial class PerfilUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfilUsuario));
             bv = new Label();
             se = new Label();
             aq = new Label();
@@ -45,12 +46,15 @@
             label1 = new Label();
             label2 = new Label();
             enderecobox = new TextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // bv
             // 
+            bv.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             bv.AutoSize = true;
-            bv.Location = new Point(12, 26);
+            bv.Location = new Point(217, 12);
             bv.Name = "bv";
             bv.Size = new Size(41, 15);
             bv.TabIndex = 0;
@@ -58,8 +62,9 @@
             // 
             // se
             // 
+            se.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             se.AutoSize = true;
-            se.Location = new Point(12, 107);
+            se.Location = new Point(200, 110);
             se.Name = "se";
             se.Size = new Size(27, 15);
             se.TabIndex = 1;
@@ -67,8 +72,9 @@
             // 
             // aq
             // 
+            aq.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             aq.AutoSize = true;
-            aq.Location = new Point(5, 68);
+            aq.Location = new Point(217, 60);
             aq.Name = "aq";
             aq.Size = new Size(53, 15);
             aq.TabIndex = 2;
@@ -76,8 +82,9 @@
             // 
             // xd
             // 
+            xd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             xd.AutoSize = true;
-            xd.Location = new Point(12, 138);
+            xd.Location = new Point(200, 156);
             xd.Name = "xd";
             xd.Size = new Size(29, 15);
             xd.TabIndex = 3;
@@ -85,8 +92,9 @@
             // 
             // ln
             // 
+            ln.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             ln.AutoSize = true;
-            ln.Location = new Point(176, 41);
+            ln.Location = new Point(12, 135);
             ln.Name = "ln";
             ln.Size = new Size(49, 15);
             ln.TabIndex = 4;
@@ -94,8 +102,9 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Location = new Point(176, 77);
+            label6.Location = new Point(366, 110);
             label6.Name = "label6";
             label6.Size = new Size(82, 15);
             label6.TabIndex = 5;
@@ -103,65 +112,74 @@
             // 
             // usuariobox
             // 
-            usuariobox.Location = new Point(254, 33);
+            usuariobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            usuariobox.Location = new Point(12, 153);
             usuariobox.Name = "usuariobox";
-            usuariobox.Size = new Size(100, 23);
+            usuariobox.Size = new Size(160, 23);
             usuariobox.TabIndex = 8;
             // 
             // nomebox
             // 
-            nomebox.Location = new Point(59, 23);
+            nomebox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            nomebox.Location = new Point(200, 30);
             nomebox.Name = "nomebox";
-            nomebox.Size = new Size(100, 23);
+            nomebox.Size = new Size(313, 23);
             nomebox.TabIndex = 9;
             // 
             // cepbox
             // 
-            cepbox.Location = new Point(59, 138);
+            cepbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            cepbox.Location = new Point(200, 172);
             cepbox.Name = "cepbox";
-            cepbox.Size = new Size(100, 23);
+            cepbox.Size = new Size(160, 23);
             cepbox.TabIndex = 11;
             // 
             // telefonebox
             // 
-            telefonebox.Location = new Point(64, 65);
+            telefonebox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            telefonebox.Location = new Point(200, 78);
             telefonebox.Name = "telefonebox";
-            telefonebox.Size = new Size(100, 23);
+            telefonebox.Size = new Size(313, 23);
             telefonebox.TabIndex = 12;
             // 
             // ruabox
             // 
-            ruabox.Location = new Point(64, 99);
+            ruabox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            ruabox.Location = new Point(200, 127);
             ruabox.Name = "ruabox";
-            ruabox.Size = new Size(100, 23);
+            ruabox.Size = new Size(160, 23);
             ruabox.TabIndex = 13;
             // 
             // compbox
             // 
-            compbox.Location = new Point(264, 69);
+            compbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            compbox.Location = new Point(366, 127);
             compbox.Name = "compbox";
-            compbox.Size = new Size(100, 23);
+            compbox.Size = new Size(280, 23);
             compbox.TabIndex = 14;
             // 
             // rua
             // 
+            rua.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             rua.AutoSize = true;
-            rua.Location = new Point(178, 115);
+            rua.Location = new Point(539, 268);
             rua.Name = "rua";
             rua.Size = new Size(0, 15);
             rua.TabIndex = 7;
             // 
             // numerobox
             // 
-            numerobox.Location = new Point(264, 115);
+            numerobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            numerobox.Location = new Point(366, 172);
             numerobox.Name = "numerobox";
-            numerobox.Size = new Size(100, 23);
+            numerobox.Size = new Size(147, 23);
             numerobox.TabIndex = 10;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Location = new Point(187, 123);
+            label1.Location = new Point(386, 156);
             label1.Name = "label1";
             label1.Size = new Size(49, 15);
             label1.TabIndex = 15;
@@ -169,8 +187,9 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
-            label2.Location = new Point(187, 165);
+            label2.Location = new Point(519, 156);
             label2.Name = "label2";
             label2.Size = new Size(56, 15);
             label2.TabIndex = 16;
@@ -178,16 +197,29 @@
             // 
             // enderecobox
             // 
-            enderecobox.Location = new Point(269, 165);
+            enderecobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            enderecobox.Location = new Point(519, 172);
             enderecobox.Name = "enderecobox";
-            enderecobox.Size = new Size(95, 23);
+            enderecobox.Size = new Size(127, 23);
             enderecobox.TabIndex = 17;
             // 
-            // FrmPerfilUsuario
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(160, 113);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
+            // PerfilUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(781, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(enderecobox);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -207,6 +239,7 @@
             Controls.Add(bv);
             Name = "FrmPerfilUsuario";
             Text = "FrmPerfilUsuario";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -230,5 +263,6 @@
         private Label label1;
         private Label label2;
         private TextBox enderecobox;
+        private PictureBox pictureBox1;
     }
 }

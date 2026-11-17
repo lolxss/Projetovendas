@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Venda.Lolxss.view
 {
-    partial class frmCadastroVenda
+    partial class CadastroVenda
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,7 @@
             numquantidade.Size = new Size(120, 23);
             numquantidade.TabIndex = 8;
             // 
-            // frmCadastroVenda
+            // CadastroVenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class FrmCadastroProduto : Form
+    public partial class CadastroProduto : Form
     {
         private Controleproduto Controle;
 
@@ -20,10 +20,18 @@ namespace Projeto.Venda.Lolxss.view
         private int TotalDePaginas = 5;
         private int PaginaAtual = 1;
         private int totalporpagina = 5;
-        public FrmCadastroProduto()
+        public CadastroProduto()
         {
             InitializeComponent();
             Controle = new Controleproduto();
+        }
+        private void frmcadastro_Load(object sender, EventArgs e)
+        {
+            //finalizar produtos
+            CarregarProdutos();
+            this.cbxquantidade.SelectedIndex = 0;
+            //int pages = Controle.QuantidadePorPagina(5);S
+            //lbl.Text = $" 1 de {pages}";
         }
         private void btn_cad_Click(object sender, EventArgs e)
         {
@@ -62,14 +70,6 @@ namespace Projeto.Venda.Lolxss.view
                 MessageBox.Show(ex.Message, "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
            
-        }
-        private void frmcadastro_Load(object sender, EventArgs e)
-        {
-            //finalizar produtos
-            this.cbxquantidade.SelectedIndex = 0;
-            CarregarProdutos();
-            //int pages = Controle.QuantidadePorPagina(5);S
-            //lbl.Text = $" 1 de {pages}";
         }
         private void CarregarProdutos()
         {

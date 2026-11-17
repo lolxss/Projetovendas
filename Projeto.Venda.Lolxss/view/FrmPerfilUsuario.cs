@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Projeto.Venda.Lolxss.view
 {
-    public partial class FrmPerfilUsuario : Form
+    public partial class PerfilUsuario : Form
     {
         private ControleFuncionario controle;
         private Funcionario funcionario;
-        public FrmPerfilUsuario()
+        public PerfilUsuario()
         {
             InitializeComponent();
             controle = new ControleFuncionario();
@@ -35,12 +35,13 @@ namespace Projeto.Venda.Lolxss.view
             nomebox.Text = funcionario.nome;
             usuariobox.Text = funcionario.usuario;
             telefonebox.Text = funcionario.telefone;
-                ruabox.Text = funcionario.rua;
+            ruabox.Text = funcionario.rua;
             compbox.Text = funcionario.complemento;
             cepbox.Text = funcionario.cep;
             enderecobox.Text = funcionario.endereço;
 
-          
 
-   }    } 
+
+        }
+    }
 }
