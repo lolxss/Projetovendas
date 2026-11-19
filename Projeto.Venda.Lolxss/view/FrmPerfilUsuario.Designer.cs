@@ -47,14 +47,20 @@
             label2 = new Label();
             enderecobox = new TextBox();
             pictureBox1 = new PictureBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panel1 = new Panel();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // bv
             // 
-            bv.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            bv.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             bv.AutoSize = true;
-            bv.Location = new Point(217, 12);
+            bv.Location = new Point(6, 3);
             bv.Name = "bv";
             bv.Size = new Size(41, 15);
             bv.TabIndex = 0;
@@ -62,9 +68,9 @@
             // 
             // se
             // 
-            se.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            se.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             se.AutoSize = true;
-            se.Location = new Point(200, 110);
+            se.Location = new Point(6, 110);
             se.Name = "se";
             se.Size = new Size(27, 15);
             se.TabIndex = 1;
@@ -72,9 +78,9 @@
             // 
             // aq
             // 
-            aq.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            aq.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             aq.AutoSize = true;
-            aq.Location = new Point(217, 60);
+            aq.Location = new Point(6, 55);
             aq.Name = "aq";
             aq.Size = new Size(53, 15);
             aq.TabIndex = 2;
@@ -82,9 +88,9 @@
             // 
             // xd
             // 
-            xd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            xd.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             xd.AutoSize = true;
-            xd.Location = new Point(200, 156);
+            xd.Location = new Point(6, 174);
             xd.Name = "xd";
             xd.Size = new Size(29, 15);
             xd.TabIndex = 3;
@@ -92,9 +98,9 @@
             // 
             // ln
             // 
-            ln.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            ln.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ln.AutoSize = true;
-            ln.Location = new Point(12, 135);
+            ln.Location = new Point(366, 3);
             ln.Name = "ln";
             ln.Size = new Size(49, 15);
             ln.TabIndex = 4;
@@ -102,9 +108,9 @@
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Location = new Point(366, 110);
+            label6.Location = new Point(181, 112);
             label6.Name = "label6";
             label6.Size = new Size(82, 15);
             label6.TabIndex = 5;
@@ -112,48 +118,48 @@
             // 
             // usuariobox
             // 
-            usuariobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            usuariobox.Location = new Point(12, 153);
+            usuariobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            usuariobox.Location = new Point(337, 21);
             usuariobox.Name = "usuariobox";
-            usuariobox.Size = new Size(160, 23);
+            usuariobox.Size = new Size(154, 23);
             usuariobox.TabIndex = 8;
             // 
             // nomebox
             // 
-            nomebox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            nomebox.Location = new Point(200, 30);
+            nomebox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            nomebox.Location = new Point(3, 21);
             nomebox.Name = "nomebox";
             nomebox.Size = new Size(313, 23);
             nomebox.TabIndex = 9;
             // 
             // cepbox
             // 
-            cepbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            cepbox.Location = new Point(200, 172);
+            cepbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cepbox.Location = new Point(6, 192);
             cepbox.Name = "cepbox";
             cepbox.Size = new Size(160, 23);
             cepbox.TabIndex = 11;
             // 
             // telefonebox
             // 
-            telefonebox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            telefonebox.Location = new Point(200, 78);
+            telefonebox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            telefonebox.Location = new Point(6, 73);
             telefonebox.Name = "telefonebox";
             telefonebox.Size = new Size(313, 23);
             telefonebox.TabIndex = 12;
             // 
             // ruabox
             // 
-            ruabox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            ruabox.Location = new Point(200, 127);
+            ruabox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ruabox.Location = new Point(3, 130);
             ruabox.Name = "ruabox";
             ruabox.Size = new Size(160, 23);
             ruabox.TabIndex = 13;
             // 
             // compbox
             // 
-            compbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            compbox.Location = new Point(366, 127);
+            compbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            compbox.Location = new Point(181, 130);
             compbox.Name = "compbox";
             compbox.Size = new Size(280, 23);
             compbox.TabIndex = 14;
@@ -169,17 +175,17 @@
             // 
             // numerobox
             // 
-            numerobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            numerobox.Location = new Point(366, 172);
+            numerobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            numerobox.Location = new Point(172, 192);
             numerobox.Name = "numerobox";
             numerobox.Size = new Size(147, 23);
             numerobox.TabIndex = 10;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(386, 156);
+            label1.Location = new Point(181, 174);
             label1.Name = "label1";
             label1.Size = new Size(49, 15);
             label1.TabIndex = 15;
@@ -187,9 +193,9 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(519, 156);
+            label2.Location = new Point(334, 174);
             label2.Name = "label2";
             label2.Size = new Size(56, 15);
             label2.TabIndex = 16;
@@ -197,49 +203,84 @@
             // 
             // enderecobox
             // 
-            enderecobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            enderecobox.Location = new Point(519, 172);
+            enderecobox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            enderecobox.Location = new Point(334, 192);
             enderecobox.Name = "enderecobox";
             enderecobox.Size = new Size(127, 23);
             enderecobox.TabIndex = 17;
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Location = new Point(6, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(160, 113);
+            pictureBox1.Size = new Size(491, 261);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 1);
+            tableLayoutPanel1.Controls.Add(panel2, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 270F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 430F));
+            tableLayoutPanel1.Size = new Size(503, 547);
+            tableLayoutPanel1.TabIndex = 19;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(nomebox);
+            panel1.Controls.Add(usuariobox);
+            panel1.Controls.Add(ln);
+            panel1.Controls.Add(bv);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(enderecobox);
+            panel1.Controls.Add(telefonebox);
+            panel1.Controls.Add(aq);
+            panel1.Controls.Add(compbox);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(ruabox);
+            panel1.Controls.Add(se);
+            panel1.Controls.Add(numerobox);
+            panel1.Controls.Add(cepbox);
+            panel1.Controls.Add(xd);
+            panel1.Location = new Point(3, 273);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(491, 231);
+            panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(pictureBox1);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(497, 264);
+            panel2.TabIndex = 1;
             // 
             // PerfilUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(781, 450);
-            Controls.Add(pictureBox1);
-            Controls.Add(enderecobox);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(compbox);
-            Controls.Add(ruabox);
-            Controls.Add(telefonebox);
-            Controls.Add(cepbox);
-            Controls.Add(numerobox);
-            Controls.Add(nomebox);
-            Controls.Add(usuariobox);
+            ClientSize = new Size(503, 547);
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(rua);
-            Controls.Add(label6);
-            Controls.Add(ln);
-            Controls.Add(xd);
-            Controls.Add(aq);
-            Controls.Add(se);
-            Controls.Add(bv);
-            Name = "FrmPerfilUsuario";
-            Text = "FrmPerfilUsuario";
+            Name = "PerfilUsuario";
+            Text = "Perfil do Usuario";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -264,5 +305,8 @@
         private Label label2;
         private TextBox enderecobox;
         private PictureBox pictureBox1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
+        private Panel panel2;
     }
 }

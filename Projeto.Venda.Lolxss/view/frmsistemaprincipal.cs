@@ -14,7 +14,7 @@ namespace Projeto.Venda.Lolxss.view
 {
     public partial class FrmSistemaPrincipal : Form
     {
-        
+
         private ControleFuncionario Controle;
         private Funcionario funcionario;
         public FrmSistemaPrincipal()
@@ -54,19 +54,21 @@ namespace Projeto.Venda.Lolxss.view
 
             painelprincipal.Controls.Add(formulario);
             formulario.Show();
+          
         }
 
         private void btncadfuncionario_Click(object sender, EventArgs e)
         {
             CadastroFuncionario frm = new CadastroFuncionario();
             ExibirFrm(frm);
+            lblnome.Visible = false;
         }
 
         private void cad_prod_Click(object sender, EventArgs e)
         {
             CadastroProduto frm = new CadastroProduto();
             ExibirFrm(frm);
-
+            lblnome.Visible = false;
         }
 
         private void sair_Click(object sender, EventArgs e)
@@ -80,16 +82,14 @@ namespace Projeto.Venda.Lolxss.view
         {
             PerfilUsuario frm = new PerfilUsuario();
             ExibirFrm(frm);
-
+            lblnome.Visible = false;
         }
 
         private void cad_venda_Click(object sender, EventArgs e)
         {
             CadastroVenda frm = new CadastroVenda();
             ExibirFrm(frm);
+            lblnome.Visible = false;
         }
-      
-
-
     }
 }

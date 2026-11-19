@@ -33,8 +33,8 @@
             btncadfuncionario = new Button();
             cad_prod = new Button();
             panel1 = new Panel();
-            painelprincipal = new Panel();
             panel2 = new Panel();
+            painelprincipal = new Panel();
             lblTitulo = new Label();
             sair = new Button();
             usuario = new Button();
@@ -76,11 +76,19 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(painelprincipal);
             panel1.Location = new Point(-1, 163);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1085, 494);
+            panel1.Size = new Size(1187, 551);
             panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1181, 46);
+            panel2.TabIndex = 4;
             // 
             // painelprincipal
             // 
@@ -88,21 +96,14 @@
             painelprincipal.Dock = DockStyle.Fill;
             painelprincipal.Location = new Point(0, 0);
             painelprincipal.Name = "painelprincipal";
-            painelprincipal.Size = new Size(1085, 494);
+            painelprincipal.Size = new Size(1187, 551);
             painelprincipal.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1082, 46);
-            panel2.TabIndex = 4;
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(378, 9);
+            lblTitulo.Location = new Point(472, 9);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(270, 40);
             lblTitulo.TabIndex = 0;
@@ -110,6 +111,7 @@
             // 
             // sair
             // 
+            sair.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             sair.Location = new Point(955, 91);
             sair.Name = "sair";
             sair.Size = new Size(112, 30);
@@ -142,7 +144,7 @@
             // 
             lblnome.AutoSize = true;
             lblnome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblnome.Location = new Point(473, 52);
+            lblnome.Location = new Point(596, 52);
             lblnome.Name = "lblnome";
             lblnome.Size = new Size(14, 21);
             lblnome.TabIndex = 7;
@@ -152,10 +154,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1189, 727);
+            ClientSize = new Size(1189, 961);
             Controls.Add(lblnome);
-            Controls.Add(lblTitulo);
             Controls.Add(sair);
+            Controls.Add(lblTitulo);
             Controls.Add(panel1);
             Controls.Add(usuario);
             Controls.Add(btncadfuncionario);

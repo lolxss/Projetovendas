@@ -24,12 +24,13 @@ namespace Projeto.Venda.Lolxss.view
         {
             InitializeComponent();
             Controle = new Controleproduto();
+            CarregarProdutos();
         }
         private void frmcadastro_Load(object sender, EventArgs e)
         {
             //finalizar produtos
             CarregarProdutos();
-            this.cbxquantidade.SelectedIndex = 0;
+            this.cbxquantidade.SelectedIndex = 1;
             //int pages = Controle.QuantidadePorPagina(5);S
             //lbl.Text = $" 1 de {pages}";
         }
@@ -37,7 +38,7 @@ namespace Projeto.Venda.Lolxss.view
         {
             string nome = this.txtnome.Text;
             string marca = this.txtmarca.Text;
-            int preco =Convert.ToInt32(this.txtpreco.Text);
+            int preco = Convert.ToInt32(this.txtpreco.Text);
             int quantidade = Convert.ToInt32(this.quantidade.Text);
             //enviar para o Controle
             Produto Produto = new Produto
@@ -49,7 +50,7 @@ namespace Projeto.Venda.Lolxss.view
             };
             try
             {
-            bool resp = Controle.CriarProduto(Produto);
+                bool resp = Controle.CriarProduto(Produto);
                 if (resp)
                 {
                     MessageBox.Show("cadastrar com sucesso", "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,12 +65,12 @@ namespace Projeto.Venda.Lolxss.view
                 }
                 CarregarProdutos();
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 //mostrar o porque do erro
                 MessageBox.Show(ex.Message, "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
+
         }
         private void CarregarProdutos()
         {
@@ -184,6 +185,16 @@ namespace Projeto.Venda.Lolxss.view
             this.totalporpagina = int.Parse(this.cbxquantidade.Text);
             //recalcular paginas
             CarregarProdutos();
+        }
+
+        private void lbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CadastroProduto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

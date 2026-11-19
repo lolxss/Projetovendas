@@ -16,13 +16,13 @@ namespace Projeto.Venda.Lolxss.view
     public partial class CadastroFuncionario : Form
     {
         private ControleFuncionario Controle;
-       
+
         public CadastroFuncionario()
         {
             InitializeComponent();
             Controle = new ControleFuncionario();
             this.cbxadm.SelectedIndex = 0;
-            
+
         }
 
         private void FrmFuncionario_Load(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace Projeto.Venda.Lolxss.view
             string usuario = txtusuario.Text;
             string senha = txtsenha.Text;
             string confirmarsenha = txtsenha2.Text;
-            bool adm = (this.cbxadm.SelectedIndex == 0)? false : true;
+            bool adm = (this.cbxadm.SelectedIndex == 0) ? false : true;
             if (senha != confirmarsenha)
             {
                 MessageBox.Show("senhas nao concidem",
@@ -97,7 +97,5 @@ namespace Projeto.Venda.Lolxss.view
             dgvfuncionario.DataSource = lista;
             this.dgvfuncionario.Columns["senha"].Visible = false;
         }
-        
-        
     }
 }
