@@ -70,6 +70,8 @@ namespace Projeto.Venda.Lolxss.view
                 //mostrar o porque do erro
                 MessageBox.Show(ex.Message, "cadastro do produto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.atualizar.Enabled = false;
+            this.excluir.Enabled = false;
 
         }
         private void CarregarProdutos()
@@ -185,16 +187,6 @@ namespace Projeto.Venda.Lolxss.view
             this.totalporpagina = int.Parse(this.cbxquantidade.Text);
             //recalcular paginas
             CarregarProdutos();
-        }
-
-        private void lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CadastroProduto_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

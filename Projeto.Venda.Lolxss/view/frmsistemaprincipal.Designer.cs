@@ -33,8 +33,8 @@
             btncadfuncionario = new Button();
             cad_prod = new Button();
             panel1 = new Panel();
-            panel2 = new Panel();
             painelprincipal = new Panel();
+            panel2 = new Panel();
             lblTitulo = new Label();
             sair = new Button();
             usuario = new Button();
@@ -56,21 +56,27 @@
             // 
             // btncadfuncionario
             // 
+            btncadfuncionario.Image = (Image)resources.GetObject("btncadfuncionario.Image");
+            btncadfuncionario.ImageAlign = ContentAlignment.MiddleLeft;
             btncadfuncionario.Location = new Point(12, 36);
             btncadfuncionario.Name = "btncadfuncionario";
             btncadfuncionario.Size = new Size(115, 56);
             btncadfuncionario.TabIndex = 1;
             btncadfuncionario.Text = "Cadastro do funcionario";
+            btncadfuncionario.TextAlign = ContentAlignment.MiddleRight;
             btncadfuncionario.UseVisualStyleBackColor = true;
             btncadfuncionario.Click += btncadfuncionario_Click;
             // 
             // cad_prod
             // 
+            cad_prod.Image = (Image)resources.GetObject("cad_prod.Image");
+            cad_prod.ImageAlign = ContentAlignment.MiddleLeft;
             cad_prod.Location = new Point(143, 36);
             cad_prod.Name = "cad_prod";
             cad_prod.Size = new Size(115, 56);
             cad_prod.TabIndex = 2;
             cad_prod.Text = "Cadastro do produto";
+            cad_prod.TextAlign = ContentAlignment.MiddleRight;
             cad_prod.UseVisualStyleBackColor = true;
             cad_prod.Click += cad_prod_Click;
             // 
@@ -83,13 +89,6 @@
             panel1.Size = new Size(1187, 551);
             panel1.TabIndex = 3;
             // 
-            // panel2
-            // 
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1181, 46);
-            panel2.TabIndex = 4;
-            // 
             // painelprincipal
             // 
             painelprincipal.Controls.Add(panel2);
@@ -98,6 +97,13 @@
             painelprincipal.Name = "painelprincipal";
             painelprincipal.Size = new Size(1187, 551);
             painelprincipal.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1181, 46);
+            panel2.TabIndex = 4;
             // 
             // lblTitulo
             // 
@@ -122,21 +128,27 @@
             // 
             // usuario
             // 
-            usuario.Location = new Point(143, 111);
+            usuario.Image = (Image)resources.GetObject("usuario.Image");
+            usuario.ImageAlign = ContentAlignment.MiddleLeft;
+            usuario.Location = new Point(143, 102);
             usuario.Name = "usuario";
-            usuario.Size = new Size(115, 47);
+            usuario.Size = new Size(115, 55);
             usuario.TabIndex = 5;
-            usuario.Text = "usuario";
+            usuario.Text = "Usuario";
+            usuario.TextAlign = ContentAlignment.MiddleRight;
             usuario.UseVisualStyleBackColor = true;
             usuario.Click += usuario_Click;
             // 
             // cad_venda
             // 
+            cad_venda.Image = (Image)resources.GetObject("cad_venda.Image");
+            cad_venda.ImageAlign = ContentAlignment.MiddleLeft;
             cad_venda.Location = new Point(12, 102);
             cad_venda.Name = "cad_venda";
             cad_venda.Size = new Size(115, 56);
             cad_venda.TabIndex = 6;
-            cad_venda.Text = "Cadastro da venda";
+            cad_venda.Text = "Cadastro da  venda";
+            cad_venda.TextAlign = ContentAlignment.MiddleRight;
             cad_venda.UseVisualStyleBackColor = true;
             cad_venda.Click += cad_venda_Click;
             // 
