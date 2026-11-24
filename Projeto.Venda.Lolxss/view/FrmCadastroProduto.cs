@@ -24,8 +24,9 @@ namespace Projeto.Venda.Lolxss.view
         {
             InitializeComponent();
             Controle = new Controleproduto();
-            CarregarProdutos();
+         
         }
+
         private void frmcadastro_Load(object sender, EventArgs e)
         {
             //finalizar produtos
@@ -34,6 +35,7 @@ namespace Projeto.Venda.Lolxss.view
             //int pages = Controle.QuantidadePorPagina(5);S
             //lbl.Text = $" 1 de {pages}";
         }
+        
         private void btn_cad_Click(object sender, EventArgs e)
         {
             string nome = this.txtnome.Text;
@@ -74,6 +76,7 @@ namespace Projeto.Venda.Lolxss.view
             this.excluir.Enabled = false;
 
         }
+        
         private void CarregarProdutos()
         {
             TotalDePaginas = Controle.QuantidadePorPagina(totalporpagina);

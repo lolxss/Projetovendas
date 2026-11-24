@@ -273,6 +273,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroProduto";
             Text = "Cadastro dos Produtos";
+            Load += frmcadastro_Load;
             ((System.ComponentModel.ISupportInitialize)dgvprodutos).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
