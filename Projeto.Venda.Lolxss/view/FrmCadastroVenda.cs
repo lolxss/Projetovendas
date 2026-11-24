@@ -1,4 +1,5 @@
 ﻿using Projeto.Venda.Lolxss.Controle;
+using Projeto.Venda.Lolxss.controller;
 using Projeto.Venda.Lolxss.model;
 
 namespace Projeto.Venda.Lolxss.view
@@ -9,11 +10,14 @@ namespace Projeto.Venda.Lolxss.view
         private ControleVenda VendaControle;
         private List<Item> carrinho = new List<Item>();
 
+        private Relatorio relatorio;
+
         public CadastroVenda()
         {
             InitializeComponent();
             ControleProduto = new Controleproduto();
             VendaControle = new ControleVenda();
+            relatorio = new Relatorio();
         }
 
         private void CarregarProdutos()
@@ -148,7 +152,7 @@ namespace Projeto.Venda.Lolxss.view
                     carrinho.Clear();
                     frmcadproduto_Load(this, EventArgs.Empty);
                     MessageBox.Show("venda cadastrada com sucesso!!!", "cadastro da venda");
-
+                    relatorio.salvarPdf();
                 }
                 else
                 {

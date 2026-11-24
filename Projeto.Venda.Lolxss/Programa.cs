@@ -1,5 +1,6 @@
+using Projeto.Venda.Lolxss.controller;
 using Projeto.Venda.Lolxss.view;
-
+using QuestPDF.Infrastructure;
 namespace Projeto.Venda.Lolxss
 {
     internal static class Programa
@@ -7,10 +8,11 @@ namespace Projeto.Venda.Lolxss
         [STAThread]
         static void Main()
         {
-
+            QuestPDF.Settings.License = LicenseType.Community;
             ApplicationConfiguration.Initialize();
             //Application.Run(new frmcadastrovenda());
-
+           Relatorio relatorio = new Relatorio();
+          
             while (true) 
             { 
              using (FrmSessão sessão = new FrmSessão())
