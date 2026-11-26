@@ -1,4 +1,5 @@
 using Projeto.Venda.Lolxss.controller;
+using Projeto.Venda.Lolxss.model;
 using Projeto.Venda.Lolxss.view;
 using QuestPDF.Infrastructure;
 namespace Projeto.Venda.Lolxss
@@ -12,7 +13,16 @@ namespace Projeto.Venda.Lolxss
             ApplicationConfiguration.Initialize();
             //Application.Run(new frmcadastrovenda());
            Relatorio relatorio = new Relatorio();
-          
+            //List<Item> itens = new List<Item>();
+            //itens.Add(new Item
+            //{
+            //      nome_produto = "pera",
+            //      preco = 350,
+            //      quantidade = 4,
+            //}
+            //);
+            //var documento = relatorio.gerarNota(itens);
+            //relatorio.salvarPdf(documento);
             while (true) 
             { 
              using (FrmSessão sessão = new FrmSessão())

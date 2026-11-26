@@ -366,6 +366,11 @@ ASALocalRun/
 # Visual Studio History (VSHistory) files
 .vshistory/
 
+Projeto.Venda.Lolxss/.env
+Projeto.Venda.Lolxss/bin/**
+Projeto.Venda.Lolxss/obj/**
+
+
 # BeatPulse healthcheck temp database
 healthchecksdb
 

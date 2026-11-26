@@ -149,10 +149,13 @@ namespace Projeto.Venda.Lolxss.view
                 bool resposta = VendaControle.cadastrarVenda(this.carrinho);
                 if (resposta)
                 {
-                    carrinho.Clear();
+                    
                     frmcadproduto_Load(this, EventArgs.Empty);
                     MessageBox.Show("venda cadastrada com sucesso!!!", "cadastro da venda");
-                    relatorio.salvarPdf();
+                    var documento = relatorio.gerarNota(carrinho);
+                    relatorio.salvarPdf(documento);
+                    carrinho.Clear();
+
                 }
                 else
                 {
