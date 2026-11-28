@@ -45,3 +45,9 @@ C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\ob
 C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\obj\Debug\net10.0-windows\Projeto.Venda.Lolxss.view.CadastroProduto.resources
 C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\obj\Debug\net10.0-windows\Projeto.Venda.Lolxss.view.CadastroVenda.resources
 C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\obj\Debug\net10.0-windows\Projeto.Venda.Lolxss.view.PerfilUsuario.resources
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\bin\Debug\net10.0-windows\DotNetEnv.dll
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\bin\Debug\net10.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\bin\Debug\net10.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\bin\Debug\net10.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\bin\Debug\net10.0-windows\Superpower.dll
+C:\Users\denis.mssvezu\source\repos\Projeto.Venda.Lolxss\Projeto.Venda.Lolxss\bin\Debug\net10.0-windows\.env

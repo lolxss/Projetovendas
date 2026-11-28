@@ -1,14 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "wwAWaTDugnY=",
+  "dgSpecHash": "CLzp2JEY9mQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\denis.mssvezu\\source\\repos\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss\\Projeto.Venda.Lolxss.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\denis.mssvezu\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\dotnetenv\\3.2.0\\dotnetenv.3.2.0.nupkg.sha512",
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\microsoft.extensions.configuration\\1.1.2\\microsoft.extensions.configuration.1.1.2.nupkg.sha512",
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\1.1.2\\microsoft.extensions.configuration.abstractions.1.1.2.nupkg.sha512",
     "C:\\Users\\denis.mssvezu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.15\\microsoft.extensions.dependencyinjection.abstractions.10.0.15.nupkg.sha512",
     "C:\\Users\\denis.mssvezu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.15\\microsoft.extensions.logging.abstractions.10.0.15.nupkg.sha512",
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\microsoft.extensions.primitives\\1.1.1\\microsoft.extensions.primitives.1.1.1.nupkg.sha512",
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\denis.mssvezu\\.nuget\\packages\\mysqlconnector\\3.0.0\\mysqlconnector.3.0.0.nupkg.sha512",
-    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\questpdf\\2026.9.2\\questpdf.2026.9.2.nupkg.sha512"
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\questpdf\\2026.9.2\\questpdf.2026.9.2.nupkg.sha512",
+    "C:\\Users\\denis.mssvezu\\.nuget\\packages\\superpower\\3.0.0\\superpower.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }
